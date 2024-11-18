@@ -1,68 +1,65 @@
 <!DOCTYPE html>
-<html lang="en" data-sav-theme="dark">
+<html lang="en" data-sav-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/layout/layout.css">
     <link rel="stylesheet" href="css/aligns/aligns.css">
     <link rel="stylesheet" href="css/spacer/spacer.css">
+    <link rel="stylesheet" href="css/selectors/selectors.css">
     <title>Home</title>
 </head>
 
 <body>
-    <div class="container border">
-        <div class="row border h-center" style="background-color: black;">
-            <div class="col-12 border">.col-10</div>
-            <div class="col-11 border h-evenly">
-                <div class="col-2 border">col-2</div>
-                <div class="col-2 border">col-2</div>
+    <div class="container">
+        <div class="card p border border-radius bg-gradient" id="card">
+            <div class="col-12" id="card-header">
+                <h2>Task title</h2>
             </div>
-            <div class="col-10 border">
-                <div class="col-9 border">.col-10 .col-9</div>
-                <div class="col-3 border">.col-10 .col-9</div>
-            </div>
-        </div>
-
-        <div class="row border">
-            <div class="col-12">
-                <div class="col-3 border">Barra lateral</div>
-                <div class="col-9 border">Área de contenido</div>
-            </div>
-        </div>
-
-        <!-- <div style="margin: 20PX;"></div>
-
-        <div class="row h-center" style="background-color:black;">
-            <div class="col border v-center h-center" style="height: 200px;">Hola</div>
-            <div class="col border">
-                <div class="col border">col-2 > col</div>
-                <div class="col border">col-2 > col</div>
-                <div class="col border">col-2 > col</div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col border">Two</div>
-            <div class="col border">Three</div>
-            <div class="col border">Four</div>
-        </div>
-
-        <div class="row">
-            <div class="col border">
-                <div class="col-2 border">Celda 1</div>
-                <div class="col-2 border">Celda 2</div>
+            <div class="col-12 column" id="card-body">
+                <div class="col-12 item display-block pt pb v-start" id="option-group">
+                    <input type="checkbox" id="item-1" name="item-1">
+                    <label for="item-1">Item 1</label>
+                </div>
+                <div class="col-12 item display-block pt pb v-start" id="option-group">
+                    <input type="checkbox" id="item-2" name="item-2">
+                    <label for="item-2">Item 2</label>
+                </div>
+                <div class="col-12 item display-block pt pb v-start" id="option-group">
+                    <input type="checkbox" id="item-3" name="item-3">
+                    <label for="item-3">Testeando desbordamiento de tarea para verificar espaciado</label>
+                </div>
             </div>
 
+            <div class="col-12" id="card-footer">
+                <form action="" method="POST">
+                    <div class="col-12" style="background-color: black;">
+                        <input type="text" value="Hola">
+                    </div>
+                    <!-- <div class="col-12 mt-2 mb-2" style="background-color: black;"> -->
+
+                    <!-- <div class="col-10 mt h-start" style="border: 1px solid black"> -->
+
+                    <!-- <textarea class="border-radius-2 p input-field" rows="2" cols="23" id="observation"
+                                name="observation" placeholder="Observación" required></textarea> -->
+                    <!-- </div> -->
+                    <!-- <div class="col-2 mt" style="border: 1px solid black"> -->
+                    <!-- BTN -->
+                    <!-- <button type="icon" class="border-radius-2 p">
+                                <i class="bi bi-send-fill"></i>
+                            </button> -->
+                    <!-- </div> -->
+                </form>
+
+            </div>
+
         </div>
 
-        <div class="row border">
-            <div class="col border">Celda 3</div>
-            <div class="col-2 border">Celda 4</div>
-            <div class="col border">Celda 5</div>
-        </div>
-    </div> -->
+    </div>
+    </div>
 </body>
 
 </html>
