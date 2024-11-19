@@ -10,213 +10,266 @@
     <link rel="stylesheet" href="css/aligns/aligns.css">
     <link rel="stylesheet" href="css/spacer/spacer.css">
     <link rel="stylesheet" href="css/selectors/selectors.css">
+    <link rel="stylesheet" href="css/display/position.css">
+
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <title>Home</title>
 </head>
 
 <body>
+    <!-- contenedor -->
     <div class="container">
-        <div class="row h-evenly">
-            <div class="card p m border border-radius bg-gradient" id="card">
-                <div class="col-12" id="card-header">
-                    <h2>Task title</h2>
-                </div>
-                <div class="col-12 column" id="card-body">
-                    <div class="col-12 item display-block pt pb v-start" id="option-group">
-                        <input type="checkbox" id="item-1" name="item-1">
-                        <label for="item-1">Item 1</label>
-                    </div>
-                    <div class="col-12 item display-block pt pb v-start" id="option-group">
-                        <input type="checkbox" id="item-2" name="item-2">
-                        <label for="item-2">Item 2</label>
-                    </div>
-                    <div class="col-12 item display-block pt pb v-start" id="option-group">
-                        <input type="checkbox" id="item-3" name="item-3">
-                        <label for="item-3">Testeando desbordamiento de tarea para verificar espaciado</label>
-                    </div>
-                </div>
-                <div class="col-12 mt-2 mb-2" id="card-footer">
-                    <form action="" method="">
-                        <div class="row h-between">
-                            <div class="col-9 mt mb">
-                                <textarea class="border-radius-2 p input-field" rows="2" cols="20" id="observation"
-                                    name="observation" placeholder="Observación" required></textarea>
-                            </div>
-                            <div class="col-2 mt mb">
-                                <button class="border-radius-2 p v-center h-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                        class="bi bi-send-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z" />
-                                    </svg>
-                                    <span class="ps-1">Enviar</span>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
 
-            <div class="card p m border border-radius bg-gradient" id="card">
-                <div class="col-12" id="card-header">
-                    <h2>Task title</h2>
-                </div>
-                <div class="col-12 column" id="card-body">
-                    <div class="col-12 item display-block pt pb v-start" id="option-group">
-                        <input type="checkbox" id="item-1" name="item-1">
-                        <label for="item-1">Item 1</label>
-                    </div>
-                    <div class="col-12 item display-block pt pb v-start" id="option-group">
-                        <input type="checkbox" id="item-2" name="item-2">
-                        <label for="item-2">Item 2</label>
-                    </div>
-                    <div class="col-12 item display-block pt pb v-start" id="option-group">
-                        <input type="checkbox" id="item-3" name="item-3">
-                        <label for="item-3">Testeando desbordamiento de tarea para verificar espaciado</label>
-                    </div>
-                </div>
-                <div class="col-12 mt-2 mb-2" id="card-footer">
-                    <form action="" method="">
-                        <div class="row h-between">
-                            <div class="col-9 mt mb">
-                                <textarea class="border-radius-2 p input-field" rows="2" cols="20" id="observation"
-                                    name="observation" placeholder="Observación" required></textarea>
-                            </div>
-                            <div class="col-2 mt mb">
-                                <button class="border-radius-2 p v-center h-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                        class="bi bi-send-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z" />
-                                    </svg>
-                                    <span class="ps-1">Enviar</span>
-                                </button>
-                            </div>
+        <!-- inicia sidebar -->
+        <div class="col-3 position-fixed" id="sidebar-container" style="top: .5em; bottom: .5em;">
+            <aside class="sidebar column p border-radius" id="sidebar">
+                <header class="v-center mb-1" id="sidebar-header">
+                    <img src="logo.svg">
+                </header>
+                <ul id="sidebar-options">
+                    <li id="sidebar-option">
+                        <input type="radio" id="dashboard" name="sidebar">
+                        <label for="dashboard">
+                            <i class="bi bi-house"></i>
+                            <span>Dashboard</span>
+                        </label>
+                    </li>
+                    <li id="sidebar-option">
+                        <input type="radio" id="activities" name="sidebar">
+                        <label for="activities">
+                            <i class="bi bi-activity"></i>
+                            <span>Actividades</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </label>
+                        <div class="sub-menu" id="sidebar-submenu">
+                            <ul id="sidebar-submenu-options">
+                                <li id="sidebar-submenu-option">
+                                    <button type="button">En curso</button>
+                                </li>
+                                <li id="sidebar-submenu-option">
+                                    <button type="button">Sin empezar</button>
+                                </li>
+                                <li id="sidebar-submenu-option">
+                                    <button type="button">Completadas</button>
+                                </li>
+                            </ul>
                         </div>
-                    </form>
-                </div>
-            </div>
-
-            <div class="card p m border border-radius bg-gradient" id="card">
-                <div class="col-12" id="card-header">
-                    <h2>Task title</h2>
-                </div>
-                <div class="col-12 column" id="card-body">
-                    <div class="col-12 item display-block pt pb v-start" id="option-group">
-                        <input type="checkbox" id="item-1" name="item-1">
-                        <label for="item-1">Item 1</label>
-                    </div>
-                    <div class="col-12 item display-block pt pb v-start" id="option-group">
-                        <input type="checkbox" id="item-2" name="item-2">
-                        <label for="item-2">Item 2</label>
-                    </div>
-                    <div class="col-12 item display-block pt pb v-start" id="option-group">
-                        <input type="checkbox" id="item-3" name="item-3">
-                        <label for="item-3">Testeando desbordamiento de tarea para verificar espaciado</label>
-                    </div>
-                </div>
-                <div class="col-12 mt-2 mb-2" id="card-footer">
-                    <form action="" method="">
-                        <div class="row h-between">
-                            <div class="col-9 mt mb">
-                                <textarea class="border-radius-2 p input-field" rows="2" cols="20" id="observation"
-                                    name="observation" placeholder="Observación" required></textarea>
-                            </div>
-                            <div class="col-2 mt mb">
-                                <button class="border-radius-2 p v-center h-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                        class="bi bi-send-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z" />
-                                    </svg>
-                                    <span class="ps-1">Enviar</span>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-            <div class="card p m border border-radius bg-gradient" id="card">
-                <div class="col-12" id="card-header">
-                    <h2>Task title</h2>
-                </div>
-                <div class="col-12 column" id="card-body">
-                    <div class="col-12 item display-block pt pb v-start" id="option-group">
-                        <input type="checkbox" id="item-1" name="item-1">
-                        <label for="item-1">Item 1</label>
-                    </div>
-                    <div class="col-12 item display-block pt pb v-start" id="option-group">
-                        <input type="checkbox" id="item-2" name="item-2">
-                        <label for="item-2">Item 2</label>
-                    </div>
-                    <div class="col-12 item display-block pt pb v-start" id="option-group">
-                        <input type="checkbox" id="item-3" name="item-3">
-                        <label for="item-3">Testeando desbordamiento de tarea para verificar espaciado</label>
-                    </div>
-                </div>
-                <div class="col-12 mt-2 mb-2" id="card-footer">
-                    <form action="" method="">
-                        <div class="row h-between">
-                            <div class="col-9 mt mb">
-                                <textarea class="border-radius-2 p input-field" rows="2" cols="20" id="observation"
-                                    name="observation" placeholder="Observación" required></textarea>
-                            </div>
-                            <div class="col-2 mt mb">
-                                <button class="border-radius-2 p v-center h-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                        class="bi bi-send-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z" />
-                                    </svg>
-                                    <span class="ps-1">Enviar</span>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-            <div class="card p m border border-radius bg-gradient" id="card">
-                <div class="col-12" id="card-header">
-                    <h2>Task title</h2>
-                </div>
-                <div class="col-12 column" id="card-body">
-                    <div class="col-12 item display-block pt pb v-start" id="option-group">
-                        <input type="checkbox" id="item-1" name="item-1">
-                        <label for="item-1">Item 1</label>
-                    </div>
-                    <div class="col-12 item display-block pt pb v-start" id="option-group">
-                        <input type="checkbox" id="item-2" name="item-2">
-                        <label for="item-2">Item 2</label>
-                    </div>
-                    <div class="col-12 item display-block pt pb v-start" id="option-group">
-                        <input type="checkbox" id="item-3" name="item-3">
-                        <label for="item-3">Testeando desbordamiento de tarea para verificar espaciado</label>
-                    </div>
-                </div>
-                <div class="col-12 mt-2 mb-2" id="card-footer">
-                    <form action="" method="">
-                        <div class="row h-between">
-                            <div class="col-9 mt mb">
-                                <textarea class="border-radius-2 p input-field" rows="2" cols="20" id="observation"
-                                    name="observation" placeholder="Observación" required></textarea>
-                            </div>
-                            <div class="col-2 mt mb">
-                                <button class="border-radius-2 p v-center h-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                        class="bi bi-send-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z" />
-                                    </svg>
-                                    <span class="ps-1">Enviar</span>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+                    </li>
+                </ul>
+            </aside>
         </div>
+        <!-- termina sidebar -->
+
+        <!-- inicia contenedor de tarjetas -->
+        <div class="col-9 position-absolute" style="right: 0;">
+            <!-- cards -->
+            <div class="row h-evenly">
+                <div class="card p m border border-radius bg-gradient" id="card">
+                    <div class="col-12" id="card-header">
+                        <h2>Task title</h2>
+                    </div>
+                    <div class="col-12 column" id="card-body">
+                        <div class="col-12 inline-block item pt pb v-start" id="option-group">
+                            <input type="checkbox" id="item-1" name="item-1">
+                            <label for="item-1">Item 1</label>
+                        </div>
+                        <div class="col-12 inline-block item pt pb v-start" id="option-group">
+                            <input type="checkbox" id="item-2" name="item-2">
+                            <label for="item-2">Item 2</label>
+                        </div>
+                        <div class="col-12 inline-block item pt pb v-start" id="option-group">
+                            <input type="checkbox" id="item-3" name="item-3">
+                            <label for="item-3">Testeando desbordamiento de tarea para verificar espaciado</label>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-2 mb-2" id="card-footer">
+                        <form action="" method="">
+                            <div class="row h-between">
+                                <div class="col-9 mt mb">
+                                    <textarea class="border-radius-2 p input-field" rows="2" cols="20" id="observation"
+                                        name="observation" placeholder="Observación" required></textarea>
+                                </div>
+                                <div class="col-2 mt mb">
+                                    <button class="border-radius-2 p v-center h-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                            fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z" />
+                                        </svg>
+                                        <span class="ps-1">Enviar</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card p m border border-radius bg-gradient" id="card">
+                    <div class="col-12" id="card-header">
+                        <h2>Task title</h2>
+                    </div>
+                    <div class="col-12 column" id="card-body">
+                        <div class="col-12 item pt pb v-start" id="option-group" style="display: inline-block;">
+                            <input type="checkbox" id="item-1" name="item-1">
+                            <label for="item-1">Item 1</label>
+                        </div>
+                        <div class="col-12 item pt pb v-start" id="option-group" style="display: inline-block;">
+                            <input type="checkbox" id="item-2" name="item-2">
+                            <label for="item-2">Item 2</label>
+                        </div>
+                        <div class="col-12 item pt pb v-start" id="option-group" style="display: inline-block;">
+                            <input type="checkbox" id="item-3" name="item-3">
+                            <label for="item-3">Testeando desbordamiento de tarea para verificar espaciado</label>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-2 mb-2" id="card-footer">
+                        <form action="" method="">
+                            <div class="row h-between">
+                                <div class="col-9 mt mb">
+                                    <textarea class="border-radius-2 p input-field" rows="2" cols="20" id="observation"
+                                        name="observation" placeholder="Observación" required></textarea>
+                                </div>
+                                <div class="col-2 mt mb">
+                                    <button class="border-radius-2 p v-center h-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                            fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z" />
+                                        </svg>
+                                        <span class="ps-1">Enviar</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card p m border border-radius bg-gradient" id="card">
+                    <div class="col-12" id="card-header">
+                        <h2>Task title</h2>
+                    </div>
+                    <div class="col-12 column" id="card-body">
+                        <div class="col-12 item pt pb v-start" id="option-group" style="display: inline-block;">
+                            <input type="checkbox" id="item-1" name="item-1">
+                            <label for="item-1">Item 1</label>
+                        </div>
+                        <div class="col-12 item pt pb v-start" id="option-group" style="display: inline-block;">
+                            <input type="checkbox" id="item-2" name="item-2">
+                            <label for="item-2">Item 2</label>
+                        </div>
+                        <div class="col-12 item pt pb v-start" id="option-group" style="display: inline-block;">
+                            <input type="checkbox" id="item-3" name="item-3">
+                            <label for="item-3">Testeando desbordamiento de tarea para verificar espaciado</label>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-2 mb-2" id="card-footer">
+                        <form action="" method="">
+                            <div class="row h-between">
+                                <div class="col-9 mt mb">
+                                    <textarea class="border-radius-2 p input-field" rows="2" cols="20" id="observation"
+                                        name="observation" placeholder="Observación" required></textarea>
+                                </div>
+                                <div class="col-2 mt mb">
+                                    <button class="border-radius-2 p v-center h-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                            fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z" />
+                                        </svg>
+                                        <span class="ps-1">Enviar</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card p m border border-radius bg-gradient" id="card">
+                    <div class="col-12" id="card-header">
+                        <h2>Task title</h2>
+                    </div>
+                    <div class="col-12 column" id="card-body">
+                        <div class="col-12 item pt pb v-start" id="option-group" style="display: inline-block;">
+                            <input type="checkbox" id="item-1" name="item-1">
+                            <label for="item-1">Item 1</label>
+                        </div>
+                        <div class="col-12 item pt pb v-start" id="option-group" style="display: inline-block;">
+                            <input type="checkbox" id="item-2" name="item-2">
+                            <label for="item-2">Item 2</label>
+                        </div>
+                        <div class="col-12 item pt pb v-start" id="option-group" style="display: inline-block;">
+                            <input type="checkbox" id="item-3" name="item-3">
+                            <label for="item-3">Testeando desbordamiento de tarea para verificar espaciado</label>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-2 mb-2" id="card-footer">
+                        <form action="" method="">
+                            <div class="row h-between">
+                                <div class="col-9 mt mb">
+                                    <textarea class="border-radius-2 p input-field" rows="2" cols="20" id="observation"
+                                        name="observation" placeholder="Observación" required></textarea>
+                                </div>
+                                <div class="col-2 mt mb">
+                                    <button class="border-radius-2 p v-center h-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                            fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z" />
+                                        </svg>
+                                        <span class="ps-1">Enviar</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card p m border border-radius bg-gradient" id="card">
+                    <div class="col-12" id="card-header">
+                        <h2>Task title</h2>
+                    </div>
+                    <div class="col-12 column" id="card-body">
+                        <div class="col-12 item pt pb v-start" id="option-group" style="display: inline-block;">
+                            <input type="checkbox" id="item-1" name="item-1">
+                            <label for="item-1">Item 1</label>
+                        </div>
+                        <div class="col-12 item pt pb v-start" id="option-group" style="display: inline-block;">
+                            <input type="checkbox" id="item-2" name="item-2">
+                            <label for="item-2">Item 2</label>
+                        </div>
+                        <div class="col-12 item pt pb v-start" id="option-group" style="display: inline-block;">
+                            <input type="checkbox" id="item-3" name="item-3">
+                            <label for="item-3">Testeando desbordamiento de tarea para verificar espaciado</label>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-2 mb-2" id="card-footer">
+                        <form action="" method="">
+                            <div class="row h-between">
+                                <div class="col-9 mt mb">
+                                    <textarea class="border-radius-2 p input-field" rows="2" cols="20" id="observation"
+                                        name="observation" placeholder="Observación" required></textarea>
+                                </div>
+                                <div class="col-2 mt mb">
+                                    <button class="border-radius-2 p v-center h-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                            fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z" />
+                                        </svg>
+                                        <span class="ps-1">Enviar</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- termina cards -->
+        </div>
+        <!-- termina contenedor de tarjetas -->
+
     </div>
+    <!-- termina contenedor -->
 </body>
 
 </html>
