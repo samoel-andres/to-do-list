@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="css/spacer/spacer.css">
     <link rel="stylesheet" href="css/selectors/selectors.css">
     <link rel="stylesheet" href="css/display/position.css">
-
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <title>Home</title>
 </head>
@@ -24,7 +23,10 @@
         <div class="col-3 position-fixed" id="sidebar-container" style="top: .5em; bottom: .5em;">
             <aside class="sidebar column p border-radius" id="sidebar">
                 <header class="v-center mb-1" id="sidebar-header">
-                    <img src="logo.svg">
+                    <h1 class="display-flex v-center">
+                        <i class="bi bi-bookmark-fill"></i>
+                        <span class="ms">MIS TAREAS</span>
+                    </h1>
                 </header>
                 <ul id="sidebar-options">
                     <li id="sidebar-option">
@@ -44,13 +46,54 @@
                         <div class="sub-menu" id="sidebar-submenu">
                             <ul id="sidebar-submenu-options">
                                 <li id="sidebar-submenu-option">
-                                    <button type="button">En curso</button>
+                                    <button type="button">
+                                        <i class="bi bi-slash-square" style="font-size: 1.2em;"></i>
+                                        En curso
+                                    </button>
                                 </li>
                                 <li id="sidebar-submenu-option">
-                                    <button type="button">Sin empezar</button>
+                                    <button type="button">
+                                        <i class="bi bi-square" style="font-size: 1.2em;"></i>
+                                        Sin empezar
+                                    </button>
                                 </li>
                                 <li id="sidebar-submenu-option">
-                                    <button type="button">Completadas</button>
+                                    <button type="button">
+                                        <i class="bi bi-check2-square" style="font-size: 1.4em;"></i>
+                                        Completadas
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="sidebar-option">
+                        <input type="radio" id="theme" name="sidebar">
+                        <label for="theme" id="ico-theme">
+                            <i class="bi bi-brightness-high" id="ico-theme" name="ico-theme"></i>
+                            <i class="bi bi-moon" id="ico-theme" name="ico-theme"></i>
+                            <i class="bi bi-highlights" id="ico-theme" name="ico-theme"></i>
+                            <span>Tema</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </label>
+                        <div class="sub-menu" id="sidebar-submenu">
+                            <ul id="sidebar-submenu-options">
+                                <li id="sidebar-submenu-option">
+                                    <button type="button" id="light" onclick="changeTheme(this)">
+                                        <i class="bi bi-brightness-high" style="font-size: 1.2em;"></i>
+                                        Claro
+                                    </button>
+                                </li>
+                                <li id="sidebar-submenu-option">
+                                    <button type="button" id="dark" onclick="changeTheme(this)">
+                                        <i class="bi bi-moon" style="font-size: 1.2em;"></i>
+                                        Obscuro
+                                    </button>
+                                </li>
+                                <li id="sidebar-submenu-option">
+                                    <button type="button" id="auto" onclick="changeTheme(this)">
+                                        <i class="bi bi-highlights" style="font-size: 1.2em;"></i>
+                                        Auto
+                                    </button>
                                 </li>
                             </ul>
                         </div>
@@ -92,9 +135,9 @@
                                 <div class="col-2 mt mb">
                                     <button class="border-radius-2 p v-center h-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
-                                            fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
+                                            fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
                                             <path
-                                                d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z" />
+                                                d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z" />
                                         </svg>
                                         <span class="ps-1">Enviar</span>
                                     </button>
@@ -132,9 +175,9 @@
                                 <div class="col-2 mt mb">
                                     <button class="border-radius-2 p v-center h-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
-                                            fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
+                                            fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
                                             <path
-                                                d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z" />
+                                                d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z" />
                                         </svg>
                                         <span class="ps-1">Enviar</span>
                                     </button>
@@ -172,9 +215,9 @@
                                 <div class="col-2 mt mb">
                                     <button class="border-radius-2 p v-center h-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
-                                            fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
+                                            fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
                                             <path
-                                                d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z" />
+                                                d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z" />
                                         </svg>
                                         <span class="ps-1">Enviar</span>
                                     </button>
@@ -212,9 +255,9 @@
                                 <div class="col-2 mt mb">
                                     <button class="border-radius-2 p v-center h-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
-                                            fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
+                                            fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
                                             <path
-                                                d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z" />
+                                                d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z" />
                                         </svg>
                                         <span class="ps-1">Enviar</span>
                                     </button>
@@ -252,9 +295,9 @@
                                 <div class="col-2 mt mb">
                                     <button class="border-radius-2 p v-center h-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
-                                            fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
+                                            fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
                                             <path
-                                                d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z" />
+                                                d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z" />
                                         </svg>
                                         <span class="ps-1">Enviar</span>
                                     </button>
@@ -270,6 +313,9 @@
 
     </div>
     <!-- termina contenedor -->
+
+    <!-- scripts -->
+    <script type="text/javascript" src="/public/js/color-theme.js"></script>
 </body>
 
 </html>
