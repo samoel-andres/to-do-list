@@ -5,103 +5,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/layout/layout.css">
     <link rel="stylesheet" href="css/aligns/aligns.css">
     <link rel="stylesheet" href="css/spacer/spacer.css">
     <link rel="stylesheet" href="css/selectors/selectors.css">
     <link rel="stylesheet" href="css/display/position.css">
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <title>Home</title>
+    <title>Mis tareas</title>
 </head>
 
 <body>
-    <!-- contenedor -->
     <div class="container">
+        <nav>
+            <h1 class="display-flex v-center" id="header-large-screen">
+                <i class="bi bi-bookmark-fill"></i>
+                <span class="ms">MIS TAREAS</span>
+                <a id="toggle-open-menu">
+                    <i class="bi bi-list"></i>
+                </a>
+            </h1>
+        </nav>
 
-        <!-- inicia sidebar -->
-        <div class="col-3 position-fixed" id="sidebar-container" style="top: .5em; bottom: .5em;">
-            <aside class="sidebar column p border-radius" id="sidebar">
-                <header class="v-center mb-1" id="sidebar-header">
-                    <h1 class="display-flex v-center">
-                        <i class="bi bi-bookmark-fill"></i>
-                        <span class="ms">MIS TAREAS</span>
-                    </h1>
-                </header>
-                <ul id="sidebar-options">
-                    <li id="sidebar-option">
-                        <input type="radio" id="dashboard" name="sidebar">
-                        <label for="dashboard">
-                            <i class="bi bi-house"></i>
-                            <span>Dashboard</span>
-                        </label>
-                    </li>
-                    <li id="sidebar-option">
-                        <input type="radio" id="activities" name="sidebar">
-                        <label for="activities">
-                            <i class="bi bi-activity"></i>
-                            <span>Actividades</span>
-                            <i class="bi bi-chevron-down"></i>
-                        </label>
-                        <div class="sub-menu" id="sidebar-submenu">
-                            <ul id="sidebar-submenu-options">
-                                <li id="sidebar-submenu-option">
-                                    <button type="button">
-                                        <i class="bi bi-slash-square" style="font-size: 1.2em;"></i>
-                                        En curso
-                                    </button>
-                                </li>
-                                <li id="sidebar-submenu-option">
-                                    <button type="button">
-                                        <i class="bi bi-square" style="font-size: 1.2em;"></i>
-                                        Sin empezar
-                                    </button>
-                                </li>
-                                <li id="sidebar-submenu-option">
-                                    <button type="button">
-                                        <i class="bi bi-check2-square" style="font-size: 1.4em;"></i>
-                                        Completadas
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li id="sidebar-option">
-                        <input type="radio" id="theme" name="sidebar">
-                        <label for="theme">
-                            <i class="bi" id="ico-theme" name="ico-theme"></i>
-                            <span>Tema</span>
-                            <i class="bi bi-chevron-down"></i>
-                        </label>
-                        <div class="sub-menu" id="sidebar-submenu">
-                            <ul id="sidebar-submenu-options">
-                                <li id="sidebar-submenu-option">
-                                    <button type="button" id="light" onclick="changeTheme(this)">
-                                        <i class="bi bi-brightness-high" style="font-size: 1.2em;"></i>
-                                        Claro
-                                    </button>
-                                </li>
-                                <li id="sidebar-submenu-option">
-                                    <button type="button" id="dark" onclick="changeTheme(this)">
-                                        <i class="bi bi-moon" style="font-size: 1.2em;"></i>
-                                        Obscuro
-                                    </button>
-                                </li>
-                                <li id="sidebar-submenu-option">
-                                    <button type="button" id="auto" onclick="changeTheme(this)">
-                                        <i class="bi bi-highlights" style="font-size: 1.2em;"></i>
-                                        Auto
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </aside>
+        <!-- start - sidebar -->
+        <div class="col-3" id="clear-small-screen">
+            <div class="col-12" id="sidebar-container">
+                <aside class="sidebar column p border-radius" id="sidebar">
+                    <header class="v-center mb-1 h-between">
+                        <h1 class="display-flex v-center" id="header-large-screen">
+                            <i class="bi bi-bookmark-fill"></i>
+                            <span class="ms">MIS TAREAS</span>
+                        </h1>
+                        <h1 class="display-flex v-center" id="header-small-screen">
+                            <span class="ms">MENÚ</span>
+                        </h1>
+                        <a id="toggle-close-menu">
+                            <i class="bi bi-x-lg"></i>
+                        </a>
+                    </header>
+                    <ul id="sidebar-options">
+                        <li id="sidebar-option">
+                            <input type="radio" id="dashboard" name="sidebar">
+                            <label for="dashboard">
+                                <i class="bi bi-house"></i>
+                                <span>Dashboard</span>
+                            </label>
+                        </li>
+                        <li id="sidebar-option">
+                            <input type="radio" id="activities" name="sidebar">
+                            <label for="activities">
+                                <i class="bi bi-activity"></i>
+                                <span>Actividades</span>
+                                <i class="bi bi-chevron-down"></i>
+                            </label>
+                            <div class="sub-menu" id="sidebar-submenu">
+                                <ul id="sidebar-submenu-options">
+                                    <li id="sidebar-submenu-option">
+                                        <button type="button">
+                                            <i class="bi bi-slash-square" style="font-size: 1.2em;"></i>
+                                            En curso
+                                        </button>
+                                    </li>
+                                    <li id="sidebar-submenu-option">
+                                        <button type="button">
+                                            <i class="bi bi-square" style="font-size: 1.2em;"></i>
+                                            Sin empezar
+                                        </button>
+                                    </li>
+                                    <li id="sidebar-submenu-option">
+                                        <button type="button">
+                                            <i class="bi bi-check2-square" style="font-size: 1.4em;"></i>
+                                            Completadas
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li id="sidebar-option">
+                            <input type="radio" id="theme" name="sidebar">
+                            <label for="theme">
+                                <i class="bi" id="ico-theme" name="ico-theme"></i>
+                                <span>Tema</span>
+                                <i class="bi bi-chevron-down"></i>
+                            </label>
+                            <div class="sub-menu" id="sidebar-submenu">
+                                <ul id="sidebar-submenu-options">
+                                    <li id="sidebar-submenu-option">
+                                        <button type="button" id="light" onclick="changeTheme(this)">
+                                            <i class="bi bi-brightness-high" style="font-size: 1.2em;"></i>
+                                            Claro
+                                        </button>
+                                    </li>
+                                    <li id="sidebar-submenu-option">
+                                        <button type="button" id="dark" onclick="changeTheme(this)">
+                                            <i class="bi bi-moon" style="font-size: 1.2em;"></i>
+                                            Obscuro
+                                        </button>
+                                    </li>
+                                    <li id="sidebar-submenu-option">
+                                        <button type="button" id="auto" onclick="changeTheme(this)">
+                                            <i class="bi bi-highlights" style="font-size: 1.2em;"></i>
+                                            Auto
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
         </div>
-        <!-- termina sidebar -->
+        <!-- end - sidebar -->
 
-        <!-- inicia contenedor de tarjetas -->
+        <!-- start - cards container -->
         <div class="col-9 position-absolute" style="right: 0;">
             <!-- cards -->
             <div class="row h-center">
@@ -305,15 +321,13 @@
                     </div>
                 </div>
             </div>
-            <!-- termina cards -->
+            <!-- cards -->
         </div>
-        <!-- termina contenedor de tarjetas -->
-
+        <!-- end - cards container -->
     </div>
-    <!-- termina contenedor -->
 
-    <!-- scripts -->
     <script type="text/javascript" src="/public/js/color-theme.js"></script>
+    <script type="text/javascript" src="/public/js/navbar-toggle.js"></script>
 </body>
 
 </html>
