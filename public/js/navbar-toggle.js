@@ -1,13 +1,15 @@
 $(document).ready(function () {
-    $('#toggle-open-menu').click(function () {
-        $('#sidebar-container').animate({
-            left: '0'
-        })
+    var $sidebarContainer = $('#sidebar-container')
+    var $toggleOpenMenu = $('#toggle-open-menu')
+    var $toggleCloseMenu = $('#toggle-close-menu')
+    var $dashboard = $('#dashboard')
+    var $sidebarSubMenu = $('#sidebar-submenu')
+
+    $toggleOpenMenu.click(function () {
+        $sidebarContainer.addClass('open')
     })
 
-    $('#toggle-close-menu, #dashboard, #sidebar-submenu').click(function () {
-        $('#sidebar-container').animate({
-            left: '100%'
-        })
+    $toggleCloseMenu.add($dashboard).add($sidebarSubMenu).click(function () {
+        $sidebarContainer.removeClass('open')
     })
 })
