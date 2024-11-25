@@ -1,22 +1,27 @@
 const express = require('express')
 const path = require('path')
-const bodyparser = require('body-parser')
-
-// start express
+const helmet = require('helmet')
 const app = express()
 
-// body-parser on URL
-app.use(bodyparser.urlencoded({ extended: true }))
+// middleware
+app.use(helmet())
+app.use(express.urlencoded({ extended: true }))
+
+// static files
+app.use(express.static(path.join(__dirname, './public/')))
 
 // routes
 app.use(require('./src/routes/index'))
 
-// static files
-app.use(express.static(path.join(__dirname, './public')))
-
-// if the route can't be found
+// handle 404
 app.use((req, res) => {
-    res.sendFile(path.join(__dirname, './public/404.html'))
+    res.status(404).sendFile(path.join(__dirname, './public/404.html'))
+})
+
+// error handling middleware
+app.use((err, req, res) => {
+    console.err(err.stack)
+    res.status(500).send('Something broke!')
 })
 
 // the server is running
