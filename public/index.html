@@ -129,21 +129,89 @@
                     </div>
                 </div>
 
-                <!-- start - cards container -->
+                <!-- start - elements container -->
                 <div class="row h-center ps pe mt-1 mb-1">
-                    <div class="col-11">
-                        <div class="col-4">
-                            <a id="go-to-course">Tareas en curso: 0</a>
-                        </div>
-                        <div class="col-4">
-                            <a id="go-to-unstarted">Tareas sin empezar: 0</a>
-                        </div>
-                        <div class="col-4">
-                            <a id="go-to-completed">Tareas completadas: 0</a>
+                    <div class="col-11 v-center h-end">
+                        <div class="card m border border-radius bg-success display-flex v-center h-center">
+                            <a id="new-item">
+                                <h3 class="bg-success">
+                                    <i class="bi bi-plus-circle fs-1"></i>
+                                    <span class="ms">AGREGAR</span>
+                                </h3>
+                            </a>
                         </div>
                     </div>
+                    <div class="col-11 m h-between" id="shortcuts">
+                        <div class="col-3 m">
+                            <a id="go-to-course"><b>En curso:</b> 0</a>
+                        </div>
+                        <div class="col-3 m">
+                            <a id="go-to-unstarted"><b>Sin empezar:</b> 0</a>
+                        </div>
+                        <div class="col-3 m">
+                            <a id="go-to-completed"><b>Completadas:</b> 0</a>
+                        </div>
+                    </div>
+                    <div class="col-11 v-center h-center">
+                        <table class="m" id="task-list-table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Title task</th>
+                                    <th>Acitividades (completadas/total)</th>
+                                    <th>Clasificación</th>
+                                    <th>Opciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td id="ID_DB">TESTEANDO DESBORDAMIENTO DE COLUMNAS</td>
+                                    <td>TESTEANDO desbordamiento DE COLUMNAS</td>
+                                    <td>TESTEANDO DESBORDAMIENTO DE COLUMNAS</td>
+                                    <td>Clasificacion</td>
+                                    <td class="display-flex h-around" id="table-row-actions">
+                                        <a class="border-radius-2" id="update-item">
+                                            <i class="bi bi-pen fs-3"></i>
+                                        </a>
+                                        <a class="border-radius-2" id="drop-item">
+                                            <i class="bi bi-trash fs-3"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="ID_DB">TESTEANDO DESBORDAMIENTO DE COLUMNAS</td>
+                                    <td>TESTEANDO desbordamiento DE COLUMNAS</td>
+                                    <td>TESTEANDO DESBORDAMIENTO DE COLUMNAS</td>
+                                    <td>Clasificacion</td>
+                                    <td class="display-flex h-around" id="table-row-actions">
+                                        <a class="border-radius-2" id="update-item">
+                                            <i class="bi bi-pen fs-3"></i>
+                                        </a>
+                                        <a class="border-radius-2" id="drop-item">
+                                            <i class="bi bi-trash fs-3"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="ID_DB">TESTEANDO DESBORDAMIENTO DE COLUMNAS</td>
+                                    <td>TESTEANDO desbordamiento DE COLUMNAS</td>
+                                    <td>TESTEANDO DESBORDAMIENTO DE COLUMNAS</td>
+                                    <td>Clasificacion</td>
+                                    <td class="display-flex h-around" id="table-row-actions">
+                                        <a class="border-radius-2" id="update-item">
+                                            <i class="bi bi-pen fs-3"></i>
+                                        </a>
+                                        <a class="border-radius-2" id="drop-item">
+                                            <i class="bi bi-trash fs-3"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-                <!-- end - cards container -->
+
+                <!-- end - elements container -->
             </div>
 
             <div id="content-on-course" style="display: none;">
