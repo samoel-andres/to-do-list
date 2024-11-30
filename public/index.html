@@ -119,6 +119,8 @@
 
         <div class="col-9 position-absolute column" style="right: 0;">
 
+
+
             <div id="content-dashboard">
                 <div class="row h-center mb-1" id="section-header">
                     <div class="col-11">
@@ -608,6 +610,114 @@
                     </div>
                 </div>
             </div>
+
+        </div>
+    </div>
+
+    <!-- modal new task -->
+    <div class="display-flex h-center v-center position-fixed" id="modal-overlay">
+        <div class="col-8 bg-modal border-radius ps-1 pe-1 column modal" id="modal-new-task">
+            <div class="col-12 p display-flex v-center h-between" id="header-modal">
+                <h3 id="tittle-modal">
+                    NUEVA TAREA
+                </h3>
+                <a id="close-modal" name="close-modal">
+                    <i class="bi bi-x-lg fs-2"></i>
+                </a>
+            </div>
+            <div class="col-12 p" id="body-modal">
+                <form class="mt-1 mb-1" action="" method="POST">
+                    <div class="row h-between v-center mb">
+                        <div class="col-5 mt mb" id="input-group">
+                            <input class="border-radius-2 p" type="text" id="tittle-task"
+                                placeholder="Titulo de la tarea" required>
+                        </div>
+                        <div class="col-5 mt mb" id="input-group">
+                            <select class="border-radius-2 p" name="clasification" id="clasification">
+                                <option value="Normal">Normal</option>
+                                <option value="Muy importante">Muy importante</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row h-between v-center" id="tasks">
+                        <div class="col-12 mt mb h-between v-center" id="input-group">
+                            <div class="col-10 display-flex v-center h-center">
+                                <input class="border-radius-2 p" type="text" id="sub-task" placeholder="Actividad"
+                                    required>
+                            </div>
+                            <div class="col h-center v-center border border-radius-2">
+                                <a id="remove-task-item">
+                                    <i class="bi bi-x-lg fs-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-12 mt mb h-between v-center" id="input-group">
+                            <div class="col-10 display-flex v-center h-center">
+                                <input class="border-radius-2 p" type="text" id="sub-task" placeholder="Actividad"
+                                    required>
+                            </div>
+                            <div class="col h-center v-center border border-radius-2">
+                                <a id="remove-task-item">
+                                    <i class="bi bi-x-lg fs-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-12 mt mb h-between v-center" id="input-group">
+                            <div class="col-10 display-flex v-center h-center">
+                                <input class="border-radius-2 p" type="text" id="sub-task" placeholder="Actividad"
+                                    required>
+                            </div>
+                            <div class="col h-center v-center border border-radius-2">
+                                <a id="remove-task-item">
+                                    <i class="bi bi-x-lg fs-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-12 mt mb h-between v-center" id="input-group">
+                            <div class="col-10 display-flex v-center h-center">
+                                <input class="border-radius-2 p" type="text" id="sub-task" placeholder="Actividad"
+                                    required>
+                            </div>
+                            <div class="col h-center v-center border border-radius-2">
+                                <a id="remove-task-item">
+                                    <i class="bi bi-x-lg fs-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-12 mt mb h-between v-center" id="input-group">
+                            <div class="col-10 display-flex v-center h-center">
+                                <input class="border-radius-2 p" type="text" id="sub-task" placeholder="Actividad"
+                                    required>
+                            </div>
+                            <div class="col h-center v-center border border-radius-2">
+                                <a id="remove-task-item">
+                                    <i class="bi bi-x-lg fs-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row h-end me-1 v-center" id="add-item">
+                        <div class="col">
+                            <a class="col-12 border border-radius-2 p bg-success h-center">
+                                <i class="bi bi-plus-circle fs-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 p display-flex v-center h-end" id="footer-modal">
+                <div class="col-2 m">
+                    <a class="col-12 border border-radius-2 ps-2 pt pe-2 pb bg-error h-center" id="close-modal"
+                        name="close-modal">
+                        <span>Cancelar</span>
+                    </a>
+                </div>
+                <div class="col-2 m">
+                    <a class="col-12 border border-radius-2 ps-2 pt pe-2 pb bg-success h-center" id="add-task-modal">
+                        <span>Agregar</span>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -615,6 +725,7 @@
     <script type="text/javascript" src="/js/color-theme.js"></script>
     <script type="text/javascript" src="/js/navbar-toggle.js"></script>
     <script type="text/javascript" src="/js/tab-toggle.js"></script>
+    <script type="text/javascript" src="/js/modal-toggle.js"></script>
     <script type="text/javascript" src="/js/events.js"></script>
 </body>
 
