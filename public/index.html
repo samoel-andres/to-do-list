@@ -119,8 +119,6 @@
 
         <div class="col-9 position-absolute column" style="right: 0;">
 
-
-
             <div id="content-dashboard">
                 <div class="row h-center mb-1" id="section-header">
                     <div class="col-11">
@@ -165,13 +163,13 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr id="update-item" name="update-item" data-id="5">
                                     <td id="ID_DB">TESTEANDO DESBORDAMIENTO DE COLUMNAS</td>
                                     <td>TESTEANDO desbordamiento DE COLUMNAS</td>
                                     <td>TESTEANDO DESBORDAMIENTO DE COLUMNAS</td>
                                     <td>Clasificacion</td>
                                     <td class="display-flex h-around" id="table-row-actions">
-                                        <a class="border-radius-2" id="update-item">
+                                        <a class="border-radius-2" id="update-item" name="update-item" data-id="5">
                                             <i class="bi bi-pen fs-3"></i>
                                         </a>
                                         <a class="border-radius-2" id="drop-item">
@@ -179,13 +177,13 @@
                                         </a>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr id="update-item" name="update-item" data-id="10">
                                     <td id="ID_DB">TESTEANDO DESBORDAMIENTO DE COLUMNAS</td>
                                     <td>TESTEANDO desbordamiento DE COLUMNAS</td>
                                     <td>TESTEANDO DESBORDAMIENTO DE COLUMNAS</td>
                                     <td>Clasificacion</td>
                                     <td class="display-flex h-around" id="table-row-actions">
-                                        <a class="border-radius-2" id="update-item">
+                                        <a class="border-radius-2" id="update-item" name="update-item" data-id="10">
                                             <i class="bi bi-pen fs-3"></i>
                                         </a>
                                         <a class="border-radius-2" id="drop-item">
@@ -193,13 +191,13 @@
                                         </a>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr id="update-item" name="update-item" data-id="11">
                                     <td id="ID_DB">TESTEANDO DESBORDAMIENTO DE COLUMNAS</td>
                                     <td>TESTEANDO desbordamiento DE COLUMNAS</td>
                                     <td>TESTEANDO DESBORDAMIENTO DE COLUMNAS</td>
                                     <td>Clasificacion</td>
                                     <td class="display-flex h-around" id="table-row-actions">
-                                        <a class="border-radius-2" id="update-item">
+                                        <a class="border-radius-2" id="update-item" name="update-item" data-id="11">
                                             <i class="bi bi-pen fs-3"></i>
                                         </a>
                                         <a class="border-radius-2" id="drop-item">
@@ -616,20 +614,20 @@
 
     <!-- modal new task -->
     <div class="display-flex h-center v-center position-fixed" id="modal-overlay">
-        <div class="col-8 bg-modal border-radius ps-1 pe-1 column modal" id="modal-new-task">
-            <div class="col-12 p display-flex v-center h-between" id="header-modal">
-                <h3 id="tittle-modal">
+        <div class="col-8 bg-modal border-radius ps-1 pe-1 column modal" id="new-task-modal" name="new-task-modal">
+            <div class="col-12 p display-flex v-center h-between" id="modal-header">
+                <h3 id="title-modal">
                     NUEVA TAREA
                 </h3>
                 <a id="close-modal" name="close-modal">
                     <i class="bi bi-x-lg fs-2"></i>
                 </a>
             </div>
-            <div class="col-12 p" id="body-modal">
+            <div class="col-12 p" id="modal-body">
                 <form class="mt-1 mb-1" action="" method="POST">
                     <div class="row h-between v-center mb">
                         <div class="col-5 mt mb" id="input-group">
-                            <input class="border-radius-2 p" type="text" id="tittle-task"
+                            <input class="border-radius-2 p" type="text" id="title-task" name="title-task"
                                 placeholder="Titulo de la tarea" required>
                         </div>
                         <div class="col-5 mt mb" id="input-group">
@@ -642,55 +640,55 @@
                     <div class="row h-between v-center" id="tasks">
                         <div class="col-12 mt mb h-between v-center" id="input-group">
                             <div class="col-10 display-flex v-center h-center">
-                                <input class="border-radius-2 p" type="text" id="sub-task" placeholder="Actividad"
-                                    required>
+                                <input class="border-radius-2 p" type="text" id="sub-task" name="sub-task"
+                                    placeholder="Actividad" required>
                             </div>
                             <div class="col h-center v-center border border-radius-2">
-                                <a id="remove-task-item">
+                                <a id="remove-sub-task" name="remove-sub-task">
                                     <i class="bi bi-x-lg fs-2"></i>
                                 </a>
                             </div>
                         </div>
                         <div class="col-12 mt mb h-between v-center" id="input-group">
                             <div class="col-10 display-flex v-center h-center">
-                                <input class="border-radius-2 p" type="text" id="sub-task" placeholder="Actividad"
-                                    required>
+                                <input class="border-radius-2 p" type="text" id="sub-task" name="sub-task"
+                                    placeholder="Actividad" required>
                             </div>
                             <div class="col h-center v-center border border-radius-2">
-                                <a id="remove-task-item">
+                                <a id="remove-sub-task" name="remove-sub-task">
                                     <i class="bi bi-x-lg fs-2"></i>
                                 </a>
                             </div>
                         </div>
                         <div class="col-12 mt mb h-between v-center" id="input-group">
                             <div class="col-10 display-flex v-center h-center">
-                                <input class="border-radius-2 p" type="text" id="sub-task" placeholder="Actividad"
-                                    required>
+                                <input class="border-radius-2 p" type="text" id="sub-task" name="sub-task"
+                                    placeholder="Actividad" required>
                             </div>
                             <div class="col h-center v-center border border-radius-2">
-                                <a id="remove-task-item">
+                                <a id="remove-sub-task" name="remove-sub-task">
                                     <i class="bi bi-x-lg fs-2"></i>
                                 </a>
                             </div>
                         </div>
                         <div class="col-12 mt mb h-between v-center" id="input-group">
                             <div class="col-10 display-flex v-center h-center">
-                                <input class="border-radius-2 p" type="text" id="sub-task" placeholder="Actividad"
-                                    required>
+                                <input class="border-radius-2 p" type="text" id="sub-task" name="sub-task"
+                                    placeholder="Actividad" required>
                             </div>
                             <div class="col h-center v-center border border-radius-2">
-                                <a id="remove-task-item">
+                                <a id="remove-sub-task" name="remove-sub-task">
                                     <i class="bi bi-x-lg fs-2"></i>
                                 </a>
                             </div>
                         </div>
                         <div class="col-12 mt mb h-between v-center" id="input-group">
                             <div class="col-10 display-flex v-center h-center">
-                                <input class="border-radius-2 p" type="text" id="sub-task" placeholder="Actividad"
-                                    required>
+                                <input class="border-radius-2 p" type="text" id="sub-task" name="sub-task"
+                                    placeholder="Actividad" required>
                             </div>
                             <div class="col h-center v-center border border-radius-2">
-                                <a id="remove-task-item">
+                                <a id="remove-sub-task" name="remove-sub-task">
                                     <i class="bi bi-x-lg fs-2"></i>
                                 </a>
                             </div>
@@ -698,14 +696,15 @@
                     </div>
                     <div class="row h-end me-1 v-center" id="add-item">
                         <div class="col">
-                            <a class="col-12 border border-radius-2 p bg-success h-center">
+                            <a class="col-12 border border-radius-2 p bg-success h-center" id="add-sub-task-field"
+                                name="add-sub-task-field">
                                 <i class="bi bi-plus-circle fs-1"></i>
                             </a>
                         </div>
                     </div>
                 </form>
             </div>
-            <div class="col-12 p display-flex v-center h-end" id="footer-modal">
+            <div class="col-12 p display-flex v-center h-end" id="modal-footer">
                 <div class="col-2 m">
                     <a class="col-12 border border-radius-2 ps-2 pt pe-2 pb bg-error h-center" id="close-modal"
                         name="close-modal">
@@ -713,12 +712,75 @@
                     </a>
                 </div>
                 <div class="col-2 m">
-                    <a class="col-12 border border-radius-2 ps-2 pt pe-2 pb bg-success h-center" id="add-task-modal">
+                    <a class="col-12 border border-radius-2 ps-2 pt pe-2 pb bg-success h-center" id="save-task-modal">
                         <span>Agregar</span>
                     </a>
                 </div>
             </div>
         </div>
+
+        <!-- CREATION MODAL -->
+        <div class="col-8 bg-modal border-radius ps-1 pe-1 column modal" id="edit-task-modal" name="edit-task-modal">
+            <div class="col-12 p display-flex v-center h-between" id="modal-header">
+                <h3 id="title-modal">
+                    EDITAR TAREA
+                </h3>
+                <a id="close-modal" name="close-modal">
+                    <i class="bi bi-x-lg fs-2"></i>
+                </a>
+            </div>
+            <div class="col-12 p" id="modal-body">
+                <form class="mt-1 mb-1" action="" method="POST">
+                    <div class="row h-between v-center mb">
+                        <div class="col-5 mt mb" id="input-group">
+                            <input class="border-radius-2 p" type="text" id="update-title-task" name="update-title-task"
+                                placeholder="Titulo de la tarea" required>
+                        </div>
+                        <div class="col-5 mt mb" id="input-group">
+                            <select class="border-radius-2 p" name="update-clasification" id="update-clasification">
+                                <option value="Normal">Normal</option>
+                                <option value="Muy importante">Muy importante</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row h-between v-center" id="tasks">
+                        <div class="col-12 mt mb h-between v-center" id="input-group">
+                            <div class="col-10 display-flex v-center h-center">
+                                <input class="border-radius-2 p" type="text" id="update-sub-task" name="update-sub-task"
+                                    placeholder="Actividad" required>
+                            </div>
+                            <div class="col h-center v-center border border-radius-2">
+                                <a id="update-remove-sub-task" name="update-remove-sub-task">
+                                    <i class="bi bi-x-lg fs-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row h-end me-1 v-center" id="add-item">
+                        <div class="col">
+                            <a class="col-12 border border-radius-2 p bg-success h-center"
+                                id="update-add-sub-task-field" name="update-add-sub-task-field">
+                                <i class="bi bi-plus-circle fs-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 p display-flex v-center h-end" id="modal-footer">
+                <div class="col-2 m">
+                    <a class="col-12 border border-radius-2 ps-2 pt pe-2 pb  h-center" id="close-modal"
+                        name="close-modal">
+                        <span>Cancelar</span>
+                    </a>
+                </div>
+                <div class="col-2 m">
+                    <a class="col-12 border border-radius-2 ps-2 pt pe-2 pb bg-error h-center" id="update-task-modal">
+                        <span>Eliminar</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- CREATION MODAL -->
     </div>
 
     <script type="text/javascript" src="/js/jquery/jquery-3.7.1.min.js"></script>
