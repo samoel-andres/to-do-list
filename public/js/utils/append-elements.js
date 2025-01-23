@@ -3,53 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const addSubTaskFieldUpdating = document.getElementById('add-sub-task-update-modal')
 
     /**
-     * Creates an HTML element based on a configuration object.
-     * @param {Object} config - The configuration object with the required structure.
-     * @returns {HTMLElement} The created HTML element.
-     */
-    function createElement(config) {
-        const element = document.createElement(config.element)
-
-        // Add the specified attribute to the created element
-        if (config.class) element.className = config.class
-        if (config.id) element.id = config.id
-        if (config.type) element.type = config.type
-        if (config.name) element.name = config.name
-        if (config.placeholder) element.placeholder = config.placeholder
-        if (config.required) element.required = config.required
-
-        if (config.dataAttributes) {
-            for (const [key, value] of Object.entries(config.dataAttributes)) {
-                element.dataset[key] = value
-            }
-        }
-
-        // If the element has children, they are recursively created
-        if (config.children && Array.isArray(config.children)) {
-            config.children.forEach(childConfig => {
-                const childElement = createElement(childConfig)
-                element.appendChild(childElement)
-            })
-        }
-
-        return element
-    }
-
-    /**
-     * Adds an element to the DOM.
-     * @param {Object} objectConfig - The configuration object with the required structure.
-     * @param {String} parentId - The identifier of the parent element where the created element will be added.
-     * @returns {void}
-     */
-    function appendElement(objectConfig, parentId) {
-        const parent = document.getElementById(parentId)
-        const elementCreated = createElement(objectConfig)
-        if (parent && elementCreated) {
-            parent.appendChild(elementCreated)
-        }
-    }
-
-    /**
      * Adds a dynamic field to the spcified container when the button is clicked.
      * @param {HTMLElement} button - The button to trigger the action.
      * @param {String} prefix - The prefix for unique field identifiers.
@@ -112,3 +65,51 @@ document.addEventListener('DOMContentLoaded', () => {
     if (addSubtaskField) addDynamicField(addSubtaskField, 'input-group', 'dinamicFieldsNewModal')
     if (addSubTaskFieldUpdating) addDynamicField(addSubTaskFieldUpdating, 'update-input-group', 'dinamicFieldsUpdateModal')
 })
+
+/**
+ * Creates an HTML element based on a configuration object.
+ * @param {Object} config - The configuration object with the required structure.
+ * @returns {HTMLElement} The created HTML element.
+ */
+export function createElement(config) {
+    const element = document.createElement(config.element)
+
+    // Add the specified attribute to the created element
+    if (config.class) element.className = config.class
+    if (config.id) element.id = config.id
+    if (config.type) element.type = config.type
+    if (config.name) element.name = config.name
+    if (config.placeholder) element.placeholder = config.placeholder
+    if (config.required) element.required = config.required
+    if (config.text) element.innerText = config.text
+
+    if (config.dataAttributes) {
+        for (const [key, value] of Object.entries(config.dataAttributes)) {
+            element.dataset[key] = value
+        }
+    }
+
+    // If the element has children, they are recursively created
+    if (config.children && Array.isArray(config.children)) {
+        config.children.forEach(childConfig => {
+            const childElement = createElement(childConfig)
+            element.appendChild(childElement)
+        })
+    }
+
+    return element
+}
+
+/**
+ * Adds an element to the DOM.
+ * @param {Object} objectConfig - The configuration object with the required structure.
+ * @param {String} parentId - The identifier of the parent element where the created element will be added.
+ * @returns {void}
+ */
+export function appendElement(objectConfig, parentId) {
+    const parent = document.getElementById(parentId)
+    const elementCreated = createElement(objectConfig)
+    if (parent && elementCreated) {
+        parent.appendChild(elementCreated)
+    }
+}
