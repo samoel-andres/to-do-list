@@ -82,6 +82,7 @@ export function createElement(config) {
     if (config.placeholder) element.placeholder = config.placeholder
     if (config.required) element.required = config.required
     if (config.text) element.innerText = config.text
+    if (config.value) element.value = config.value
 
     if (config.dataAttributes) {
         for (const [key, value] of Object.entries(config.dataAttributes)) {
