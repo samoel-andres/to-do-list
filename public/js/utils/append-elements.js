@@ -17,13 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const objectConfig = {
                 element: {
                     element: 'div',
-                    class: 'col-12 mt mb h-between v-center',
+                    class: 'col-12 mt h-between v-center mb',
                     id: value,
                     dataAttributes: { input: value },
                     children: [
                         {
                             element: 'div',
-                            class: 'col-10 display-flex v-center h-center',
+                            class: 'col-8 display-flex v-center h-center',
                             children: [
                                 {
                                     element: 'input',
@@ -33,6 +33,30 @@ document.addEventListener('DOMContentLoaded', () => {
                                     name: 'sub-task',
                                     placeholder: 'Tarea',
                                     required: true
+                                }
+                            ]
+                        },
+                        {
+                            element: 'div',
+                            class: 'col-2 display-flex v-center h-center mt',
+                            children: [
+                                {
+                                    element: 'select',
+                                    class: 'border-radius-2 p',
+                                    name: `${prefix}-${value}`,
+                                    id: `${prefix}-${value}`,
+                                    children: [
+                                        {
+                                            element: 'option',
+                                            value: 'false',
+                                            text: 'Pendiente',
+                                        },
+                                        {
+                                            element: 'option',
+                                            value: 'true',
+                                            text: 'Realizada',
+                                        }
+                                    ]
                                 }
                             ]
                         },
@@ -63,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add an HTML element to the DOM when the button is clicked.
     if (addSubtaskField) addDynamicField(addSubtaskField, 'input-group', 'dinamicFieldsNewModal')
-    if (addSubTaskFieldUpdating) addDynamicField(addSubTaskFieldUpdating, 'update-input-group', 'dinamicFieldsUpdateModal')
+    if (addSubTaskFieldUpdating) addDynamicField(addSubTaskFieldUpdating, 'update-input-group-new', 'dinamicFieldsUpdateModal')
 })
 
 /**
