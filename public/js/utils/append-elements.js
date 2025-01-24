@@ -83,6 +83,7 @@ export function createElement(config) {
     if (config.required) element.required = config.required
     if (config.text) element.innerText = config.text
     if (config.value) element.value = config.value
+    if (config.off) element.disabled = config.off
 
     if (config.dataAttributes) {
         for (const [key, value] of Object.entries(config.dataAttributes)) {
