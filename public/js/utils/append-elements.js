@@ -12,14 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
     function addDynamicField(button, prefix, parentId) {
         let n = 0
         button.addEventListener('click', () => {
-            const value = `${prefix}-${n++}`
+            // const value = `${prefix}-${n++}`
             // Configuration object with the required structure
             const objectConfig = {
                 element: {
                     element: 'div',
                     class: 'col-12 mt h-between v-center mb',
-                    id: value,
-                    dataAttributes: { input: value },
+                    id: `${prefix}-${n++}`,
+                    dataAttributes: { input: `${prefix}-${n++}` },
                     children: [
                         {
                             element: 'div',
@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
                                     element: 'input',
                                     class: 'border-radius-2 p',
                                     type: 'text',
-                                    id: 'sub-task',
-                                    name: 'sub-task',
+                                    id: `${prefix}-${n++}`,
+                                    name: `${prefix}-${n++}`,
                                     placeholder: 'Tarea',
                                     required: true
                                 }
@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
                                 {
                                     element: 'select',
                                     class: 'border-radius-2 p',
-                                    name: `${prefix}-${value}`,
-                                    id: `${prefix}-${value}`,
+                                    name: `${prefix}-sel-${n++}`,
+                                    id: `${prefix}-sel-${n++}`,
                                     children: [
                                         {
                                             element: 'option',
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                     element: 'a',
                                     id: 'remove-sub-task',
                                     name: 'remove-sub-task',
-                                    dataAttributes: { id: value },
+                                    dataAttributes: { id: `${prefix}-${n++}` },
                                     children: [
                                         {
                                             element: 'i',
