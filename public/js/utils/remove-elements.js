@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const parentContainerTasksNewModal = document.getElementById('dinamicFieldsNewModal')
-    const parentContainerTasksUpdateModal = document.getElementById('dinamicFieldsUpdateModal')
+    const parentContainerTasksUpdateModal = document.getElementById('container-fields-update-modal')
 
     // Function to remove an element
     function removeElement(element) {
@@ -26,3 +26,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 })
+
+/**
+ * Removes the subtask list from the modals.
+ * @param {String} fieldsContainerId - The ID of the container holding the fields to be removed.
+ * @returns {void}
+ */
+export function removeTaskFromModal(fieldsContainerId) {
+    if (fieldsContainerId) {
+        const fields = document.getElementById(fieldsContainerId)
+        if (fields) {
+            while (fields.firstChild) {
+                fields.removeChild(fields.firstChild)
+            }
+        }
+    }
+}
