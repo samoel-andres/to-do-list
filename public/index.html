@@ -17,108 +17,107 @@
 
 <body>
     <div class="container">
-        <!-- start - tools menu -->
-        <nav>
-            <h1 class="display-flex v-center" id="header-large-screen">
-                <i class="bi bi-bookmark-fill"></i>
-                <span class="ms">MIS TAREAS</span>
-                <a id="toggle-open-menu">
-                    <i class="bi bi-list"></i>
-                </a>
-            </h1>
-        </nav>
+        <header>
+            <nav>
+                <h1 class="display-flex v-center" id="header-large-screen">
+                    <i class="bi bi-bookmark-fill"></i>
+                    <span class="ms">MIS TAREAS</span>
+                    <a id="toggle-open-menu">
+                        <i class="bi bi-list"></i>
+                    </a>
+                </h1>
+            </nav>
 
-        <div class="col-3" id="clear-small-screen">
-            <div class="col-12" id="sidebar-container">
-                <aside class="sidebar column p border-radius" id="sidebar">
-                    <header class="v-center mb-1 h-between">
-                        <h1 class="display-flex v-center" id="header-large-screen">
-                            <i class="bi bi-bookmark-fill"></i>
-                            <span class="ms">MIS TAREAS</span>
-                        </h1>
-                        <h1 class="display-flex v-center" id="header-small-screen">
-                            <span class="ms">MENÚ</span>
-                        </h1>
-                        <a id="toggle-close-menu">
-                            <i class="bi bi-x-lg"></i>
-                        </a>
-                    </header>
-                    <ul id="sidebar-options">
-                        <li id="sidebar-option">
-                            <input type="radio" id="dashboard" name="sidebar">
-                            <label for="dashboard">
-                                <i class="bi bi-house"></i>
-                                <span>Dashboard</span>
-                            </label>
-                        </li>
-                        <li id="sidebar-option">
-                            <input type="radio" id="activities" name="sidebar">
-                            <label for="activities">
-                                <i class="bi bi-activity"></i>
-                                <span>Actividades</span>
-                                <i class="bi bi-chevron-down"></i>
-                            </label>
-                            <div class="sub-menu" id="sidebar-submenu">
-                                <ul id="sidebar-submenu-options">
-                                    <li id="sidebar-submenu-option">
-                                        <button type="button" id="btn-course">
-                                            <i class="bi bi-slash-square" style="font-size: 1.2em;"></i>
-                                            En curso
-                                        </button>
-                                    </li>
-                                    <li id="sidebar-submenu-option">
-                                        <button type="button" id="btn-unstarted">
-                                            <i class="bi bi-square" style="font-size: 1.2em;"></i>
-                                            Sin empezar
-                                        </button>
-                                    </li>
-                                    <li id="sidebar-submenu-option">
-                                        <button type="button" id="btn-completed">
-                                            <i class="bi bi-check2-square" style="font-size: 1.4em;"></i>
-                                            Completadas
-                                        </button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li id="sidebar-option">
-                            <input type="radio" id="theme" name="sidebar">
-                            <label for="theme">
-                                <i class="bi" id="ico-theme" name="ico-theme"></i>
-                                <span>Tema</span>
-                                <i class="bi bi-chevron-down"></i>
-                            </label>
-                            <div class="sub-menu" id="sidebar-submenu">
-                                <ul id="sidebar-submenu-options">
-                                    <li id="sidebar-submenu-option">
-                                        <button type="button" id="light">
-                                            <i class="bi bi-brightness-high" style="font-size: 1.2em;"></i>
-                                            Claro
-                                        </button>
-                                    </li>
-                                    <li id="sidebar-submenu-option">
-                                        <button type="button" id="dark">
-                                            <i class="bi bi-moon" style="font-size: 1.2em;"></i>
-                                            Obscuro
-                                        </button>
-                                    </li>
-                                    <li id="sidebar-submenu-option">
-                                        <button type="button" id="auto">
-                                            <i class="bi bi-highlights" style="font-size: 1.2em;"></i>
-                                            Auto
-                                        </button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </aside>
+            <div class="col-3" id="clear-small-screen">
+                <div class="col-12" id="sidebar-container">
+                    <aside class="sidebar column p border-radius" id="sidebar">
+                        <header class="v-center mb-1 h-between">
+                            <h1 class="display-flex v-center" id="header-large-screen">
+                                <i class="bi bi-bookmark-fill"></i>
+                                <span class="ms">MIS TAREAS</span>
+                            </h1>
+                            <h1 class="display-flex v-center" id="header-small-screen">
+                                <span class="ms">MENÚ</span>
+                            </h1>
+                            <a id="toggle-close-menu">
+                                <i class="bi bi-x-lg"></i>
+                            </a>
+                        </header>
+                        <ul id="sidebar-options">
+                            <li id="sidebar-option">
+                                <input type="radio" id="dashboard" name="sidebar">
+                                <label for="dashboard">
+                                    <i class="bi bi-house"></i>
+                                    <span>Dashboard</span>
+                                </label>
+                            </li>
+                            <li id="sidebar-option">
+                                <input type="radio" id="activities" name="sidebar">
+                                <label for="activities">
+                                    <i class="bi bi-activity"></i>
+                                    <span>Actividades</span>
+                                    <i class="bi bi-chevron-down"></i>
+                                </label>
+                                <div class="sub-menu" id="sidebar-submenu">
+                                    <ul id="sidebar-submenu-options">
+                                        <li id="sidebar-submenu-option">
+                                            <button type="button" id="btn-course">
+                                                <i class="bi bi-slash-square" style="font-size: 1.2em;"></i>
+                                                En curso
+                                            </button>
+                                        </li>
+                                        <li id="sidebar-submenu-option">
+                                            <button type="button" id="btn-unstarted">
+                                                <i class="bi bi-square" style="font-size: 1.2em;"></i>
+                                                Sin empezar
+                                            </button>
+                                        </li>
+                                        <li id="sidebar-submenu-option">
+                                            <button type="button" id="btn-completed">
+                                                <i class="bi bi-check2-square" style="font-size: 1.4em;"></i>
+                                                Completadas
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li id="sidebar-option">
+                                <input type="radio" id="theme" name="sidebar">
+                                <label for="theme">
+                                    <i class="bi" id="ico-theme" name="ico-theme"></i>
+                                    <span>Tema</span>
+                                    <i class="bi bi-chevron-down"></i>
+                                </label>
+                                <div class="sub-menu" id="sidebar-submenu">
+                                    <ul id="sidebar-submenu-options">
+                                        <li id="sidebar-submenu-option">
+                                            <button type="button" id="light">
+                                                <i class="bi bi-brightness-high" style="font-size: 1.2em;"></i>
+                                                Claro
+                                            </button>
+                                        </li>
+                                        <li id="sidebar-submenu-option">
+                                            <button type="button" id="dark">
+                                                <i class="bi bi-moon" style="font-size: 1.2em;"></i>
+                                                Obscuro
+                                            </button>
+                                        </li>
+                                        <li id="sidebar-submenu-option">
+                                            <button type="button" id="auto">
+                                                <i class="bi bi-highlights" style="font-size: 1.2em;"></i>
+                                                Auto
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
             </div>
-        </div>
-        <!-- end - tools menu -->
-
+        </header>
         <div class="col-9 position-absolute column" style="right: 0;">
-
+            <!-- Dashboard -->
             <div id="content-dashboard">
                 <div class="row h-center mb-1" id="section-header">
                     <div class="col-11">
@@ -128,7 +127,6 @@
                     </div>
                 </div>
 
-                <!-- start - elements container -->
                 <div class="row h-center ps pe mt-1 mb-1">
                     <div class="col-11 v-center h-end">
                         <div class="card m border border-radius bg-success display-flex v-center h-center">
@@ -142,74 +140,30 @@
                     </div>
                     <div class="col-11 m h-between" id="shortcuts">
                         <div class="col-3 m">
-                            <a id="go-to-course"><b>En curso:</b> 0</a>
+                            <a id="go-to-course"><b>En curso:</b> <span id="onc"></span></a>
                         </div>
                         <div class="col-3 m">
-                            <a id="go-to-unstarted"><b>Sin empezar:</b> 0</a>
+                            <a id="go-to-unstarted"><b>Sin empezar:</b> <span id="uns"></span></a>
                         </div>
                         <div class="col-3 m">
-                            <a id="go-to-completed"><b>Completadas:</b> 0</a>
+                            <a id="go-to-completed"><b>Completadas:</b> <span id="com"></span></a>
                         </div>
                     </div>
                     <div class="col-11 v-center h-center">
-                        <table class="m" id="task-list-table">
+                        <table class="m" id="task-list-table" style="display: table;">
                             <thead>
                                 <tr>
                                     <th>#</th>
                                     <th>Title task</th>
-                                    <th>Acitividades (completadas/total)</th>
+                                    <th>Tareas Completadas</th>
                                     <th>Clasificación</th>
                                     <th>Opciones</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr id="update-item" name="update-item" data-id="5">
-                                    <td id="ID_DB">TESTEANDO DESBORDAMIENTO DE COLUMNAS</td>
-                                    <td>TESTEANDO desbordamiento DE COLUMNAS</td>
-                                    <td>TESTEANDO DESBORDAMIENTO DE COLUMNAS</td>
-                                    <td>Clasificacion</td>
-                                    <td class="display-flex h-around" id="table-row-actions">
-                                        <a class="border-radius-2" id="update-item" name="update-item" data-id="5">
-                                            <i class="bi bi-pen fs-3"></i>
-                                        </a>
-                                        <a class="border-radius-2" id="drop-item">
-                                            <i class="bi bi-trash fs-3"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr id="update-item" name="update-item" data-id="10">
-                                    <td id="ID_DB">TESTEANDO DESBORDAMIENTO DE COLUMNAS</td>
-                                    <td>TESTEANDO desbordamiento DE COLUMNAS</td>
-                                    <td>TESTEANDO DESBORDAMIENTO DE COLUMNAS</td>
-                                    <td>Clasificacion</td>
-                                    <td class="display-flex h-around" id="table-row-actions">
-                                        <a class="border-radius-2" id="update-item" name="update-item" data-id="10">
-                                            <i class="bi bi-pen fs-3"></i>
-                                        </a>
-                                        <a class="border-radius-2" id="drop-item">
-                                            <i class="bi bi-trash fs-3"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr id="update-item" name="update-item" data-id="11">
-                                    <td id="ID_DB">TESTEANDO DESBORDAMIENTO DE COLUMNAS</td>
-                                    <td>TESTEANDO desbordamiento DE COLUMNAS</td>
-                                    <td>TESTEANDO DESBORDAMIENTO DE COLUMNAS</td>
-                                    <td>Clasificacion</td>
-                                    <td class="display-flex h-around" id="table-row-actions">
-                                        <a class="border-radius-2" id="update-item" name="update-item" data-id="11">
-                                            <i class="bi bi-pen fs-3"></i>
-                                        </a>
-                                        <a class="border-radius-2" id="drop-item">
-                                            <i class="bi bi-trash fs-3"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                            </tbody>
+                            <tbody id="taskList"></tbody>
                         </table>
                     </div>
                 </div>
-                <!-- end - elements container -->
             </div>
 
             <div id="content-on-course" style="display: none;">
@@ -582,18 +536,17 @@
                 <!-- end - cards container -->
             </div>
 
-            <!-- footer permanece aqui, lo que cambia es el contenido de cada content -->
-            <div class="row h-center mt-1" id="section-footer">
+            <footer class="row h-center mt-1" id="section-footer">
                 <div class="col-11 ps pe">
                     <div class="col-4 display-flex v-center" id="section-a">
                         <i class="bi bi-bookmark-fill fs-2"></i>
                         <h4 class="ms">MIS TAREAS</h4>
                     </div>
                     <div class="col-4 display-flex v-center h-center" id="section-b">
-                        <span>Developed by Samoel Andres</span>
+                        <span>Desarrollado por Samoel Andres</span>
                     </div>
                     <div class="col-4 h-end display-flex v-center" id="section-c">
-                        <span>Developed by Samoel Andres</span>
+                        <span>Dessarrollado por Samoel Andres</span>
                         <div id="network-social">
                             <a class="ms" href="https://www.facebook.com" target="_blank">
                                 <i class="bi bi-facebook fs-2"></i>
@@ -607,28 +560,27 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
+            </footer>
         </div>
     </div>
 
-    <!-- modal new task -->
+    <!-- modals and overlay -->
     <div class="display-flex h-center v-center position-fixed" id="modal-overlay">
         <div class="col-8 bg-modal border-radius ps-1 pe-1 column modal" id="new-task-modal" name="new-task-modal">
             <div class="col-12 p display-flex v-center h-between" id="modal-header">
                 <h3 id="title-modal">
-                    NUEVA TAREA
+                    Agregar nueva actividad
                 </h3>
                 <a id="close-modal" name="close-modal">
                     <i class="bi bi-x-lg fs-2"></i>
                 </a>
             </div>
             <div class="col-12 p" id="modal-body">
-                <form class="mt-1 mb-1" action="" method="POST">
+                <form class="mt-1 mb-1" action="" method="POST" id="form-new-task-modal" name="form-new-task-modal">
                     <div class="row h-between v-center mb">
                         <div class="col-5 mt mb" id="input-group">
                             <input class="border-radius-2 p" type="text" id="title-task" name="title-task"
-                                placeholder="Titulo de la tarea" required>
+                                placeholder="Titulo de la actividad" required>
                         </div>
                         <div class="col-5 mt mb" id="input-group">
                             <select class="border-radius-2 p" name="clasification" id="clasification">
@@ -638,65 +590,27 @@
                         </div>
                     </div>
                     <div class="row h-between v-center" id="tasks">
-                        <div class="col-12 mt mb h-between v-center" id="input-group">
-                            <div class="col-10 display-flex v-center h-center">
-                                <input class="border-radius-2 p" type="text" id="sub-task" name="sub-task"
-                                    placeholder="Actividad" required>
-                            </div>
-                            <div class="col h-center v-center border border-radius-2">
-                                <a id="remove-sub-task" name="remove-sub-task">
-                                    <i class="bi bi-x-lg fs-2"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-12 mt mb h-between v-center" id="input-group">
-                            <div class="col-10 display-flex v-center h-center">
-                                <input class="border-radius-2 p" type="text" id="sub-task" name="sub-task"
-                                    placeholder="Actividad" required>
-                            </div>
-                            <div class="col h-center v-center border border-radius-2">
-                                <a id="remove-sub-task" name="remove-sub-task">
-                                    <i class="bi bi-x-lg fs-2"></i>
-                                </a>
+                        <div id="fields" class="col-12 column">
+                            <div class="col-12 mt h-between v-center" id="update-input-group-1"
+                                data-input="update-input-group-1">
+                                <div class="col-8 display-flex v-center h-center"><input class="border-radius-2 p"
+                                        id="drop-sub-task" type="text" name="drop-sub-task" placeholder="Tarea"
+                                        required=""></div>
+                                <div class="col-2 display-flex v-center h-center mt"><select class="border-radius-2 p"
+                                        id="drop-task-status-1" name="drop-task-status-1">
+                                        <option value="false">Pendiente</option>
+                                        <option value="true">Realizada</option>
+                                    </select></div>
+                                <div class="col h-center v-center border border-radius-2"><a id="remove-sub-task"
+                                        name="remove-sub-task" data-id="update-input-group-1"><i
+                                            class="bi bi-x-lg fs-2"></i></a></div>
                             </div>
                         </div>
-                        <div class="col-12 mt mb h-between v-center" id="input-group">
-                            <div class="col-10 display-flex v-center h-center">
-                                <input class="border-radius-2 p" type="text" id="sub-task" name="sub-task"
-                                    placeholder="Actividad" required>
-                            </div>
-                            <div class="col h-center v-center border border-radius-2">
-                                <a id="remove-sub-task" name="remove-sub-task">
-                                    <i class="bi bi-x-lg fs-2"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-12 mt mb h-between v-center" id="input-group">
-                            <div class="col-10 display-flex v-center h-center">
-                                <input class="border-radius-2 p" type="text" id="sub-task" name="sub-task"
-                                    placeholder="Actividad" required>
-                            </div>
-                            <div class="col h-center v-center border border-radius-2">
-                                <a id="remove-sub-task" name="remove-sub-task">
-                                    <i class="bi bi-x-lg fs-2"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-12 mt mb h-between v-center" id="input-group">
-                            <div class="col-10 display-flex v-center h-center">
-                                <input class="border-radius-2 p" type="text" id="sub-task" name="sub-task"
-                                    placeholder="Actividad" required>
-                            </div>
-                            <div class="col h-center v-center border border-radius-2">
-                                <a id="remove-sub-task" name="remove-sub-task">
-                                    <i class="bi bi-x-lg fs-2"></i>
-                                </a>
-                            </div>
-                        </div>
+                        <div class="col-12 column mb" id="dinamicFieldsNewModal"></div>
                     </div>
                     <div class="row h-end me-1 v-center" id="add-item">
                         <div class="col">
-                            <a class="col-12 border border-radius-2 p bg-success h-center" id="add-sub-task-field"
+                            <a class="col-12 border border-radius-2 p bg-success h-center" id="add-sub-task-new-modal"
                                 name="add-sub-task-field">
                                 <i class="bi bi-plus-circle fs-1"></i>
                             </a>
@@ -719,22 +633,22 @@
             </div>
         </div>
 
-        <!-- CREATION MODAL -->
         <div class="col-8 bg-modal border-radius ps-1 pe-1 column modal" id="edit-task-modal" name="edit-task-modal">
             <div class="col-12 p display-flex v-center h-between" id="modal-header">
                 <h3 id="title-modal">
-                    EDITAR TAREA
+                    Edición de actividad
                 </h3>
                 <a id="close-modal" name="close-modal">
                     <i class="bi bi-x-lg fs-2"></i>
                 </a>
             </div>
             <div class="col-12 p" id="modal-body">
-                <form class="mt-1 mb-1" action="" method="POST">
+                <form class="mt-1 mb-1" action="" method="POST" id="form-update-task-modal"
+                    name="form-update-task-modal">
                     <div class="row h-between v-center mb">
                         <div class="col-5 mt mb" id="input-group">
                             <input class="border-radius-2 p" type="text" id="update-title-task" name="update-title-task"
-                                placeholder="Titulo de la tarea" required>
+                                placeholder="Titulo de la actividad" required>
                         </div>
                         <div class="col-5 mt mb" id="input-group">
                             <select class="border-radius-2 p" name="update-clasification" id="update-clasification">
@@ -743,23 +657,14 @@
                             </select>
                         </div>
                     </div>
-                    <div class="row h-between v-center" id="tasks">
-                        <div class="col-12 mt mb h-between v-center" id="input-group">
-                            <div class="col-10 display-flex v-center h-center">
-                                <input class="border-radius-2 p" type="text" id="update-sub-task" name="update-sub-task"
-                                    placeholder="Actividad" required>
-                            </div>
-                            <div class="col h-center v-center border border-radius-2">
-                                <a id="update-remove-sub-task" name="update-remove-sub-task">
-                                    <i class="bi bi-x-lg fs-2"></i>
-                                </a>
-                            </div>
-                        </div>
+                    <div class="row h-between v-center" id="container-fields-update-modal">
+                        <div id="fields-update-modal" class="col-12 column"></div>
+                        <div class="col-12 column" id="dinamicFieldsUpdateModal" style="margin-top: -.5em;"></div>
                     </div>
                     <div class="row h-end me-1 v-center" id="add-item">
                         <div class="col">
                             <a class="col-12 border border-radius-2 p bg-success h-center"
-                                id="update-add-sub-task-field" name="update-add-sub-task-field">
+                                id="add-sub-task-update-modal" name="add-sub-task-field">
                                 <i class="bi bi-plus-circle fs-1"></i>
                             </a>
                         </div>
@@ -768,27 +673,80 @@
             </div>
             <div class="col-12 p display-flex v-center h-end" id="modal-footer">
                 <div class="col-2 m">
-                    <a class="col-12 border border-radius-2 ps-2 pt pe-2 pb  h-center" id="close-modal"
+                    <a class="col-12 border border-radius-2 ps-2 pt pe-2 pb bg-error h-center" id="close-modal"
                         name="close-modal">
                         <span>Cancelar</span>
                     </a>
                 </div>
                 <div class="col-2 m">
-                    <a class="col-12 border border-radius-2 ps-2 pt pe-2 pb bg-error h-center" id="update-task-modal">
-                        <span>Eliminar</span>
+                    <a class="col-12 border border-radius-2 ps-2 pt pe-2 pb bg-success h-center"
+                        id="confirm-update-task-modal">
+                        <span>Actualizar</span>
                     </a>
                 </div>
             </div>
         </div>
-        <!-- CREATION MODAL -->
+
+        <div class="col-8 bg-modal border-radius ps-1 pe-1 column modal" id="drop-task-modal" name="drop-task-modal">
+            <div class="col-12 p display-flex v-center h-between" id="modal-header">
+                <h3 id="title-modal">
+                    ¿Desea eliminar la actividad?
+                </h3>
+                <a id="close-modal" name="close-modal">
+                    <i class="bi bi-x-lg fs-2"></i>
+                </a>
+            </div>
+            <div class="col-12 p" id="modal-body">
+                <form class="mt-1 mb-1" action="" method="POST" id="form-drop-task-modal" name="form-drop-task-modal">
+                    <div class="row h-between v-center mb">
+                        <div class="col-5 mt mb" id="input-group">
+                            <input class="border-radius-2 p" type="text" id="drop-title-task" name="drop-title-task"
+                                placeholder="Titulo de la actividad" required disabled>
+                        </div>
+                        <div class="col-5 mt mb" id="input-group">
+                            <select class="border-radius-2 p" name="drop-clasification" id="drop-clasification"
+                                disabled>
+                                <option value="Normal">Normal</option>
+                                <option value="Muy importante">Muy importante</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row h-between v-center" id="tasks-added">
+                        <div id="fields-drop-modal" class="col-12 column"></div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 p display-flex v-center h-end" id="modal-footer">
+                <div class="col-2 m">
+                    <a class="col-12 border border-radius-2 ps-2 pt pe-2 pb bg-error h-center" id="close-modal"
+                        name="close-modal">
+                        <span>Cancelar</span>
+                    </a>
+                </div>
+                <div class="col-2 m">
+                    <a class="col-12 border border-radius-2 ps-2 pt pe-2 pb bg-success h-center"
+                        id="confirm-drop-task-modal">
+                        <span>Confirmar</span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <script type="text/javascript" src="/js/jquery/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="/js/color-theme.js"></script>
-    <script type="text/javascript" src="/js/navbar-toggle.js"></script>
-    <script type="text/javascript" src="/js/tab-toggle.js"></script>
-    <script type="text/javascript" src="/js/modal-toggle.js"></script>
-    <script type="text/javascript" src="/js/events.js"></script>
+
+    <script type="module" src="/js/libs/jquery/jquery-3.7.1.min.js"></script>
+    <script type="module" src="/js/utils/navbar-toggle.js"></script>
+    <script type="module" src="/js/tab-toggle.js"></script>
+    <script type="module" src="/js/utils/modal-toggle.js"></script>
+    <script type="module" src="/js/events.js"></script>
+    <script type="module" src="/js/utils/append-elements.js"></script>
+    <script type="module" src="/js/utils/remove-elements.js"></script>
+
+    <script type="module" src="/js/libs/axios/axios.min.js"></script>
+    <script type="module" src="/js/data/load-tasks.js"></script>
+    <script type="module" src="/js/data/load-task-modal.js" defer></script>
+    <script type="module" src="/js/data/analyze-tasks.js"></script>
 </body>
 
 </html>
