@@ -4,6 +4,11 @@ import { fetchTask } from "./load-tasks.js"
 /**
  * Retrieves and processes a specific task by its identifier.
  * @param {String} itemId - The identifier of the document to retrieve.
+ * @param {String} prefix - The prefix used to create the element ID.
+ * @param {String} inputTitleId - The ID of the element for the setting title.
+ * @param {String} selectDropClasificationId - The ID of the element to setting the clasification.
+ * @param {String} fieldsContainer - The ID of the fields container to add the fields with the values.
+ * @param {Boolean} fieldsDisabled - Whether the fields should be disabled (true to disable, false to enable).
  * @returns {void}
  */
 export async function loadTask(itemId, prefix, inputTitleId, selectDropClasificationId, fieldsContainer, fieldsDisabled) {
@@ -114,6 +119,7 @@ function prepareConfigurationObjectForModal(task, prefix, index, fieldsDisabled)
  * Sets the default selected option in a select element based on database value.
  * @param {String} selectId - The ID of the select element.
  * @param {Boolean} selected - The value indicating wich option should be selected.
+ * @returns {void}
  */
 function optionSelected(selectId, selected) {
     const select = document.getElementById(selectId)
