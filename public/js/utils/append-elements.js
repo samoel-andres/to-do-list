@@ -12,14 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
     function addDynamicField(button, prefix, parentId) {
         let n = 0
         button.addEventListener('click', () => {
-            // const value = `${prefix}-${n++}`
+            const nIncremented = n++
             // Configuration object with the required structure
             const objectConfig = {
                 element: {
                     element: 'div',
                     class: 'col-12 mt h-between v-center mb',
-                    id: `${prefix}-${n++}`,
-                    dataAttributes: { input: `${prefix}-${n++}` },
+                    id: `${prefix}-${nIncremented}`,
+                    dataAttributes: { input: `${prefix}-${nIncremented}` },
                     children: [
                         {
                             element: 'div',
@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
                                     element: 'input',
                                     class: 'border-radius-2 p',
                                     type: 'text',
-                                    id: `${prefix}-${n++}`,
-                                    name: `${prefix}-${n++}`,
+                                    id: `${prefix}-${nIncremented}`,
+                                    name: `${prefix}-${nIncremented}`,
                                     placeholder: 'Tarea',
                                     required: true
                                 }
@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
                                 {
                                     element: 'select',
                                     class: 'border-radius-2 p',
-                                    name: `${prefix}-sel-${n++}`,
-                                    id: `${prefix}-sel-${n++}`,
+                                    name: `${prefix}-sel-${nIncremented}`,
+                                    id: `${prefix}-sel-${nIncremented}`,
                                     children: [
                                         {
                                             element: 'option',
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                     element: 'a',
                                     id: 'remove-sub-task',
                                     name: 'remove-sub-task',
-                                    dataAttributes: { id: `${prefix}-${n++}` },
+                                    dataAttributes: { id: `${prefix}-${nIncremented}` },
                                     children: [
                                         {
                                             element: 'i',
@@ -108,6 +108,18 @@ export function createElement(config) {
     if (config.text) element.innerText = config.text
     if (config.value) element.value = config.value
     if (config.off) element.disabled = config.off
+    if (config.for) element.for = config.for
+    if (config.checked) element.checked = config.checked
+    if (config.rows) element.rows = config.rows
+    if (config.cols) element.cols = config.cols
+    if (config.xmlns) element.xmlns = config.xmlns
+    if (config.width) element.width = config.width
+    if (config.height) element.height = config.height
+    if (config.fill) element.fill = config.fill
+    if (config.viewBox) element.viewBox = config.viewBox
+    if (config.d) element.d = config.d
+    if (config.action) element.action = config.action
+    if (config.method) element.method = config.method
 
     if (config.dataAttributes) {
         for (const [key, value] of Object.entries(config.dataAttributes)) {
