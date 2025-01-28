@@ -12,17 +12,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Use event delegation
     parentContainerTasksNewModal.addEventListener('click', (event) => {
-        const id = event.target.parentNode?.dataset?.id
-        if (id) {
-            removeElement(id)
+        // const id = event.target.parentNode?.dataset?.id
+        const id = event.target.parentNode?.id
+        const dropElementDataInput = event.target.closest('[data-input]').dataset.input
+        if (dropElementDataInput && id === 'remove-sub-task') {
+            removeElement(dropElementDataInput)
         }
     })
 
     // Use event delegation
     parentContainerTasksUpdateModal.addEventListener('click', (event) => {
-        const id = event.target.parentNode?.dataset?.id
-        if (id) {
-            removeElement(id)
+        const id = event.target.parentNode?.id
+        const dropElementDataInput = event.target.closest('[data-input]').dataset.input
+        if (dropElementDataInput && id === 'remove-sub-task') {
+            removeElement(dropElementDataInput)
         }
     })
 })
