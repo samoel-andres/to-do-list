@@ -1,50 +1,20 @@
 import { loadTask } from "../data/load-task-modal.js"
 import { removeTaskFromModal } from "./remove-elements.js"
 
-document.addEventListener('DOMContentLoaded', () => {
-    let modal
-    let isAnimating = false
+let modal = null
+let isAnimating = false
+let modals = null
+let modalOverlay = null
 
-    const modalOverlay = document.getElementById('modal-overlay')
+document.addEventListener('DOMContentLoaded', () => {
+
+    modalOverlay = document.getElementById('modal-overlay')
+    modals = ['#new-task-modal', '#edit-task-modal', '#drop-task-modal', '#alert-modal']
     const toggleCloseModal = document.querySelectorAll('[name="close-modal"]')
     const toggleOpenNewTaskModal = document.querySelector('#new-item')
     const parentToggleUpdateModal = document.getElementById('taskList')
     const dinamicFieldContainer = ['#dinamicFieldsNewModal', '#dinamicFieldsUpdateModal']
-    const modals = ['#new-task-modal', '#edit-task-modal', '#drop-task-modal']
     const forms = ['#form-new-task-modal', '#form-update-task-modal', '#form-drop-task-modal']
-
-    /**
-     * Displays the required modal.
-     * @param {String} modalSelector - The identifier of the modal to display.
-     * @returns {void}
-     */
-    function showModal(modalSelector) {
-        if (isAnimating) return
-
-        isAnimating = true
-
-        // Hide all displayed modals
-        modals.forEach(modalId => {
-            const modalElement = document.querySelector(modalId)
-            if (modalElement) {
-                modalElement.style.display = 'none'
-                modalElement.classList.remove('active')
-            }
-        })
-
-        modal = document.querySelector(modalSelector)
-
-        if (modal) {
-            modal.style.display = 'flex'
-            modalOverlay.classList.add('active')
-
-            // Animate the modal
-            setTimeout(() => {
-                modal.classList.add('active')
-                isAnimating = false
-            }, 50)
-        }
-    }
 
     /**
      * Removes the dynamic fields and resets the form values.
@@ -145,3 +115,35 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 })
+
+/**
+     * Displays the required modal.
+     * @param {String} modalSelector - The identifier of the modal to display.
+     * @returns {void}
+     */
+export function showModal(modalSelector) {
+    if (isAnimating) return
+    isAnimating = true
+
+    // Hide all displayed modals
+    modals.forEach(modalId => {
+        const modalElement = document.querySelector(modalId)
+        if (modalElement) {
+            modalElement.style.display = 'none'
+            modalElement.classList.remove('active')
+        }
+    })
+
+    modal = document.querySelector(modalSelector)
+
+    if (modal) {
+        modal.style.display = 'flex'
+        modalOverlay.classList.add('active')
+
+        // Animate the modal
+        setTimeout(() => {
+            modal.classList.add('active')
+            isAnimating = false
+        }, 50)
+    }
+}
