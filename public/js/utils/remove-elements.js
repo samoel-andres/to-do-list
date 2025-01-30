@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Use event delegation
     parentContainerTasksNewModal.addEventListener('click', (event) => {
-        // const id = event.target.parentNode?.dataset?.id
         const id = event.target.parentNode?.id
         const dropElementDataInput = event.target.closest('[data-input]').dataset.input
         if (dropElementDataInput && id === 'remove-sub-task') {
