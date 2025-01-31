@@ -108,7 +108,7 @@ export function createElement(config) {
     if (config.text) element.innerText = config.text
     if (config.value) element.value = config.value
     if (config.off) element.disabled = config.off
-    if (config.for) element.for = config.for
+    if (config.for) element.htmlFor = config.for
     if (config.checked) element.checked = config.checked
     if (config.rows) element.rows = config.rows
     if (config.cols) element.cols = config.cols
