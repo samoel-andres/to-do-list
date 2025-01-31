@@ -232,7 +232,7 @@
 
     <!-- modals and overlay -->
     <div class="display-flex h-center v-center position-fixed" id="modal-overlay">
-        <div class="col-8 bg-modal border-radius ps-1 pe-1 column modal" id="new-task-modal" name="new-task-modal">
+        <div class="col-7 bg-modal border-radius ps-1 pe-1 column modal" id="new-task-modal" name="new-task-modal">
             <div class="col-12 p display-flex v-center h-between" id="modal-header">
                 <h3 id="title-modal">
                     Agregar nueva actividad
@@ -284,7 +284,7 @@
             </div>
         </div>
 
-        <div class="col-8 bg-modal border-radius ps-1 pe-1 column modal" id="edit-task-modal" name="edit-task-modal">
+        <div class="col-7 bg-modal border-radius ps-1 pe-1 column modal" id="edit-task-modal" name="edit-task-modal">
             <div class="col-12 p display-flex v-center h-between" id="modal-header">
                 <h3 id="title-modal">
                     Edición de actividad
@@ -338,7 +338,7 @@
             </div>
         </div>
 
-        <div class="col-8 bg-modal border-radius ps-1 pe-1 column modal" id="drop-task-modal" name="drop-task-modal">
+        <div class="col-7 bg-modal border-radius ps-1 pe-1 column modal" id="drop-task-modal" name="drop-task-modal">
             <div class="col-12 p display-flex v-center h-between" id="modal-header">
                 <h3 id="title-modal">
                     ¿Desea eliminar la actividad?
@@ -376,8 +376,28 @@
                 </div>
                 <div class="col-2 m">
                     <a class="col-12 border border-radius-2 ps-2 pt pe-2 pb bg-success h-center"
-                        id="confirm-drop-task-modal">
+                        id="confirm-drop-task-modal" data-id="">
                         <span>Confirmar</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-5 bg-modal border-radius ps-1 pe-1 column modal" id="alert-modal" name="alert-modal">
+            <div class="col-12 p display-flex v-center h-between" id="modal-header">
+                <h3 id="title-alert-modal"></h3>
+                <a id="close-modal" name="close-modal">
+                    <i class="bi bi-x-lg fs-2"></i>
+                </a>
+            </div>
+            <div class="col-12 p" id="modal-body">
+                <p id="message-alert-modal"></p>
+            </div>
+            <div class="col-12 p display-flex v-center h-end" id="modal-footer">
+                <div class="col-2 m">
+                    <a class="col-12 border border-radius-2 ps-2 pt pe-2 pb bg-error h-center" id="close-modal"
+                        name="close-modal">
+                        <span>Cerrar</span>
                     </a>
                 </div>
             </div>
@@ -399,6 +419,7 @@
     <script type="module" src="/js/data/load-task-modal.js" defer></script>
     <script type="module" src="/js/data/analyze-tasks.js"></script>
     <script type="module" src="/js/data/load-tasks-cards.js"></script>
+    <script type="module" src="/js/data/drop-task.js"></script>
 </body>
 
 </html>
