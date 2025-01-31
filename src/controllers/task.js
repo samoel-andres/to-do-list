@@ -40,7 +40,7 @@ const readTask = async (req, res) => {
         }
     } catch (err) {
         console.error(err.message)
-        res.status(500).send({ read: false, message: 'Error retrieving data' })
+        return res.status(500).send({ read: false, message: 'Error retrieving data' })
     }
 }
 
@@ -71,13 +71,13 @@ const createTask = async (req, res) => {
         const data = await TaskModel.create(task)
 
         if (!data) {
-            res.status(404).send({ saved: false, message: 'Not saved' })
+            return res.status(404).send({ saved: false, message: 'Not saved' })
         }
 
-        res.status(201).send({ data, saved: true, message: 'Saved succesfully' })
+        return res.status(201).send({ data, saved: true, message: 'Saved succesfully' })
     } catch (err) {
         console.error(err.message)
-        res.status(500).send({ saved: false, message: 'Not saved' })
+        return res.status(500).send({ saved: false, message: 'Not saved' })
     }
 }
 
@@ -120,10 +120,10 @@ const updateTask = async (req, res) => {
             return res.status(404).send({ updated: false, message: 'Task not found' })
         }
 
-        res.status(200).send({ data, updated: true, message: 'Updated successfully' })
+        return res.status(200).send({ data, updated: true, message: 'Updated successfully' })
     } catch (err) {
         console.error(err.message)
-        res.status(500).send({ updated: false, message: 'Update failed' })
+        return res.status(500).send({ updated: false, message: 'Update failed' })
     }
 }
 
@@ -138,26 +138,26 @@ const updateTask = async (req, res) => {
  * @returns {object} 500 - Server error if the request fails.
  */
 const deleteTask = async (req, res) => {
-    const { _id } = req.params
-
-    if (!_id) {
-        return res.status(400).send({ deleted: false, message: 'ID is required' })
-    }
-    if (!mongoose.Types.ObjectId.isValid(_id)) {
-        return res.status(400).send({ deleted: false, message: 'Invalid ObjectId format' })
-    }
-
     try {
+        const { _id } = req.params
+
+        if (!_id) {
+            return res.status(400).send({ deleted: false, message: 'ID is required' })
+        }
+        if (!mongoose.Types.ObjectId.isValid(_id)) {
+            return res.status(400).send({ deleted: false, message: 'Invalid ObjectId format' })
+        }
+
         const data = await TaskModel.findByIdAndDelete(_id)
 
         if (!data) {
-            res.status(404).send({ deleted: false, message: 'Delete failed' })
+            return res.status(404).send({ deleted: false, message: 'Delete failed' })
         }
 
-        res.status(200).send({ data, deleted: true, message: 'Deleted successfully' })
+        return res.status(200).send({ data, deleted: true, message: 'Deleted successfully' })
     } catch (err) {
         console.error(err.message)
-        res.status(500).send({ deleted: false, message: 'Delete failed' })
+        return res.status(500).send({ deleted: false, message: 'Delete failed' })
     }
 }
 
