@@ -28,7 +28,11 @@ const taskSchema = new mongoose.Schema({
         trim: true,
         enum: ['Normal', 'Muy importante']
     },
-    list: [taskItemSchema]
+    list: [taskItemSchema],
+    observation: {
+        type: String,
+        trim: true,
+    }
 })
 
 module.exports = mongoose.model('Task', taskSchema)
