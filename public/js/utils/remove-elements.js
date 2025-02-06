@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
  * @param {String} fieldsContainerId - The ID of the container holding the fields to be removed.
  * @returns {void}
  */
-export function removeTaskFromModal(fieldsContainerId) {
+export function clearContainer(fieldsContainerId) {
     if (fieldsContainerId) {
         const fields = document.getElementById(fieldsContainerId)
         if (fields) {
