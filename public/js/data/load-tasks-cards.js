@@ -62,8 +62,9 @@ function prepareconfigurationObjectCards(data) {
             children: [
                 {
                     element: 'form',
-                    action: '',
-                    method: '',
+                    id: 'card-form-update-task',
+                    name: 'card-form-update-task',
+                    dataAttributes: { clasification: item.clasification },
                     children: [
                         {
                             element: 'div',
@@ -102,9 +103,9 @@ function prepareconfigurationObjectCards(data) {
                                                     cols: 20,
                                                     id: 'observation',
                                                     name: 'observation',
-                                                    placeholder: 'Observation',
-                                                    value: item.value,
-                                                    required: true
+                                                    placeholder: 'Observación',
+                                                    value: item.observation,
+                                                    required: false
                                                 }
                                             ]
                                         }
@@ -117,6 +118,8 @@ function prepareconfigurationObjectCards(data) {
                                         {
                                             element: 'button',
                                             class: 'border-radius-2 p v-center h-center',
+                                            name: 'update-card',
+                                            dataAttributes: { id: item._id },
                                             children: [
                                                 {
                                                     element: 'svg',
