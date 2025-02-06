@@ -154,10 +154,10 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Title task</th>
-                                    <th>Tareas Completadas</th>
+                                    <th>Titulo de tarea</th>
+                                    <th>Realizadas</th>
                                     <th>Clasificación</th>
-                                    <th>Opciones</th>
+                                    <th>Acciones</th>
                                 </tr>
                             </thead>
                             <tbody id="taskList"></tbody>
@@ -167,7 +167,7 @@
             </div>
 
             <!-- Board 1 -->
-            <div id="content-on-course" style="display: none;">
+            <div id="content-on-course" name="content-on-course" style="display: none;">
                 <div class="row h-center mb-1" id="section-header">
                     <div class="col-11">
                         <h2 class="display-flex v-center">
@@ -179,7 +179,7 @@
             </div>
 
             <!-- Board 2 -->
-            <div id="content-unstarted" style="display: none;">
+            <div id="content-unstarted" name="content-unstarted" style="display: none;">
                 <div class="row h-center mb-1" id="section-header">
                     <div class="col-11">
                         <h2 class="display-flex v-center">
@@ -191,7 +191,7 @@
             </div>
 
             <!-- Board 3 -->
-            <div id="content-completed" style="display: none;">
+            <div id="content-completed" name="content-completed" style="display: none;">
                 <div class="row h-center mb-1" id="section-header">
                     <div class="col-11">
                         <h2 class="display-flex v-center">
@@ -242,7 +242,7 @@
                 </a>
             </div>
             <div class="col-12 p" id="modal-body">
-                <form class="mt-1 mb-1" action="" method="POST" id="form-new-task-modal" name="form-new-task-modal">
+                <form class="mt-1 mb-1" id="form-new-task-modal" name="form-new-task-modal">
                     <div class="row h-between v-center mb">
                         <div class="col-5 mt mb" id="input-group">
                             <input class="border-radius-2 p" type="text" id="title-task" name="title-task"
@@ -294,8 +294,7 @@
                 </a>
             </div>
             <div class="col-12 p" id="modal-body">
-                <form class="mt-1 mb-1" action="" method="POST" id="form-update-task-modal"
-                    name="form-update-task-modal">
+                <form class="mt-1 mb-1" id="form-update-task-modal" name="form-update-task-modal">
                     <div class="row h-between v-center mb">
                         <div class="col-5 mt mb" id="input-group">
                             <input class="border-radius-2 p" type="text" id="update-title-task" name="update-title-task"
@@ -348,7 +347,7 @@
                 </a>
             </div>
             <div class="col-12 p" id="modal-body">
-                <form class="mt-1 mb-1" action="" method="POST" id="form-drop-task-modal" name="form-drop-task-modal">
+                <form class="mt-1 mb-1" id="form-drop-task-modal" name="form-drop-task-modal">
                     <div class="row h-between v-center mb">
                         <div class="col-5 mt mb" id="input-group">
                             <input class="border-radius-2 p" type="text" id="drop-title-task" name="drop-title-task"
@@ -420,6 +419,8 @@
     <script type="module" src="/js/data/analyze-tasks.js"></script>
     <script type="module" src="/js/data/load-tasks-cards.js"></script>
     <script type="module" src="/js/data/drop-task.js"></script>
+    <script type="module" src="/js/data/update-task.js"></script>
+    <script type="module" src="/js/data/create-task.js"></script>
 </body>
 
 </html>
