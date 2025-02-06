@@ -1,5 +1,5 @@
 import { loadTask } from "../data/load-task-modal.js"
-import { removeTaskFromModal } from "./remove-elements.js"
+import { clearContainer } from "./remove-elements.js"
 
 let modal = null
 let isAnimating = false
@@ -12,9 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
     modals = ['#new-task-modal', '#edit-task-modal', '#drop-task-modal', '#alert-modal']
     const toggleCloseModal = document.querySelectorAll('[name="close-modal"]')
     const toggleOpenNewTaskModal = document.querySelector('#new-item')
-    const parentToggleUpdateModal = document.getElementById('taskList')
+    const parentTaskList = document.getElementById('taskList')
     const dinamicFieldContainer = ['#dinamicFieldsNewModal', '#dinamicFieldsUpdateModal']
     const forms = ['#form-new-task-modal', '#form-update-task-modal', '#form-drop-task-modal']
+    const modalEditDataId = document.getElementById('confirm-update-task-modal')
+    const modalDropDataId = document.getElementById('confirm-drop-task-modal')
 
     /**
      * Removes the dynamic fields and resets the form values.
@@ -38,6 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 resetForm.reset()
             }
         })
+
+        if (modalEditDataId) modalEditDataId.dataset.id = ''
+        if (modalDropDataId) modalDropDataId.dataset.id = ''
     }
 
     // Find all elements and add the function to hide the active modal.
@@ -51,8 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     modalOverlay.classList.remove('active')
                     modal = null
                     cleanFormModal()
-                    removeTaskFromModal('fields-drop-modal')
-                    removeTaskFromModal('fields-update-modal')
+                    clearContainer('fields-drop-modal')
+                    clearContainer('fields-update-modal')
                 }, 200)
             }
         })
@@ -68,8 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 modalOverlay.classList.remove('active')
                 modal = null
                 cleanFormModal()
-                removeTaskFromModal('fields-drop-modal')
-                removeTaskFromModal('fields-update-modal')
+                clearContainer('fields-drop-modal')
+                clearContainer('fields-update-modal')
             }, 200)
         }
     })
@@ -84,23 +89,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 modalOverlay.classList.remove('active')
                 modal = null
                 cleanFormModal()
-                removeTaskFromModal('fields-drop-modal')
-                removeTaskFromModal('fields-update-modal')
+                clearContainer('fields-drop-modal')
+                clearContainer('fields-update-modal')
             }, 200)
         }
     })
 
     // Open the modal to update or delete an activity.
-    parentToggleUpdateModal.addEventListener('click', (event) => {
+    parentTaskList.addEventListener('click', (event) => {
         const parentElement = event.target.parentNode
         if (parentElement) {
             const id = parentElement.id
             const dataId = parentElement.getAttribute('data-id')
             if (id && dataId) {
                 if (id === 'update-item') {
+                    if (modalEditDataId) modalEditDataId.dataset.id = dataId
+
                     loadTask(dataId, 'update-input-group', 'update-title-task', 'update-clasification', 'fields-update-modal', false)
                     showModal('#edit-task-modal')
                 } else if (id === 'drop-item') {
+                    if (modalDropDataId) modalDropDataId.dataset.id = dataId
+
                     loadTask(dataId, 'drop-input-group', 'drop-title-task', 'drop-clasification', 'fields-drop-modal', true)
                     showModal('#drop-task-modal')
                 }
@@ -117,10 +126,10 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 /**
-     * Displays the required modal.
-     * @param {String} modalSelector - The identifier of the modal to display.
-     * @returns {void}
-     */
+ * Displays the required modal.
+ * @param {String} modalSelector - The identifier of the modal to display.
+ * @returns {void}
+ */
 export function showModal(modalSelector) {
     if (isAnimating) return
     isAnimating = true
