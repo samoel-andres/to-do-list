@@ -1,4 +1,5 @@
 import { showModal } from "../utils/modal-toggle.js"
+import { reload } from "./reload.js"
 
 document.addEventListener('DOMContentLoaded', () => {
     const modalTitle = document.getElementById('title-alert-modal')
@@ -30,6 +31,8 @@ async function confirmDelete(itemId, modalTitle, modalMessage) {
         if (!res.deleted) {
             modalTitle.innerHTML = 'Tarea eliminada exitosamente'
             modalMessage.innerHTML = 'La tarea y subtareas se ha eliminado correctamente.'
+
+            reload()
         } else {
             modalTitle.innerHTML = 'Error'
             modalMessage.innerHTML = 'No se pudo eliminar la tarea especificada.'
