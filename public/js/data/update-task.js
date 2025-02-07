@@ -1,4 +1,5 @@
 import { showModal } from "../utils/modal-toggle.js"
+import { reload } from "./reload.js"
 
 document.addEventListener('DOMContentLoaded', () => {
     const modalTitle = document.getElementById('title-alert-modal')
@@ -140,6 +141,8 @@ async function confirmUpdate(itemId, updatedValues, modalTitle, modalMessage) {
         if (!res.updated) {
             modalTitle.innerHTML = 'Tarea actualizada exitosamente'
             modalMessage.innerHTML = 'La tarea y subtareas se han actualizado correctamente.'
+
+            reload()
         } else {
             modalTitle.innerHTML = 'Error'
             modalMessage.innerHTML = 'No se pudo actualizar la informacion de la tarea especificada.'
