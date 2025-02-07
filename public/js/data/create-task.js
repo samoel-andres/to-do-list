@@ -1,4 +1,5 @@
 import { showModal } from "../utils/modal-toggle.js"
+import { reload } from "./reload.js"
 
 document.addEventListener('DOMContentLoaded', () => {
     const modalTitle = document.getElementById('title-alert-modal')
@@ -20,6 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!res.saved) {
                 modalTitle.innerHTML = 'Registro exitoso'
                 modalMessage.innerHTML = 'El registro se ha realizado correctamente.'
+                
+                reload()
             } else {
                 modalTitle.innerHTML = 'Error'
                 modalMessage.innerHTML = 'Ha ocurrido un error, el registro no se pudo realizar.'
