@@ -1,27 +1,27 @@
 import { fetchTaskData } from "./load-tasks.js"
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', loadData())
+
+/**
+ * Sets values to the specified HTML elements.
+ * @param {HTMLElement} onc - The element to set the "in progress" value.
+ * @param {HTMLElement} uns - The element to set the "not started" value.
+ * @param {HTMLElement} com - The element to set the "completed" value.
+ * @returns {Promise<void>}
+ */
+export async function loadData() {
+    const data = await analyzeTasks()
+
     const onc = document.getElementById('onc')
     const uns = document.getElementById('uns')
     const com = document.getElementById('com')
 
-    /**
-     * Sets values to the specified HTML elements.
-     * @param {HTMLElement} onc - The element to set the "in progress" value.
-     * @param {HTMLElement} uns - The element to set the "not started" value.
-     * @param {HTMLElement} com - The element to set the "completed" value.
-     * @returns {Promise<void>}
-     */
-    async function loadData(onc, uns, com) {
-        const data = await analyzeTasks()
+    if (!onc || !uns || !com) return
 
-        onc.innerText = data.course || 0
-        uns.innerText = data.uncompleted || 0
-        com.innerText = data.completed || 0
-    }
-
-    loadData(onc, uns, com)
-})
+    onc.innerText = data.course || 0
+    uns.innerText = data.uncompleted || 0
+    com.innerText = data.completed || 0
+}
 
 /**
  * Retrieves the task list and counts the elements based on their status.
