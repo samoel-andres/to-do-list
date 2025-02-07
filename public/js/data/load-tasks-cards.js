@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', load())
  * Retrieves task data and generates the corresponding cards in the UI.
  * @returns {void}
  */
-async function load() {
+export async function load() {
     const data = await fetchTaskData()
     if (!data) return
 
