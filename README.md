@@ -6,6 +6,8 @@
 
 Este proyecto es una aplicación completa que combina una API REST desarrollada con Node.js y Express, junto con un frontend basado en HTML, CSS y JavaScript. La API se conecta con MongoDB para gestionar tareas, y el frontend interactúa con ella para mostrar la información dinámicamente.
 
+![Interfaz principal](public/evidence/home.JPG)
+
 ## Tecnologías
 
 Backend (API Rest)
