@@ -1,0 +1,192 @@
+/* layout flow */
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+
+    /*TESTEANDP ADAPTACION PANTALLAS GRANDES*/
+    max-width: 1399.98px;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* TESTEANDO CONTENIDO */
+    position: relative;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: .5em;
+}
+
+.col-12 {
+    display: flex;
+    flex: 0 0 auto;
+    width: 100% !important;
+
+    /*TESTEANDP ADAPTACION PANTALLAS GRANDES*/
+    max-width: 1399.98px;
+}
+
+.col-11 {
+    display: flex;
+    flex: 0 0 auto;
+    width: 91.3% !important;
+
+    /*TESTEANDP ADAPTACION PANTALLAS GRANDES*/
+    max-width: 1283.315px;
+}
+
+.col-10 {
+    display: flex;
+    flex: 0 0 auto;
+    width: 83% !important;
+
+    /*TESTEANDP ADAPTACION PANTALLAS GRANDES*/
+    max-width: 1166.65px;
+}
+
+.col-9 {
+    display: flex;
+    flex: 0 0 auto;
+    width: 74.7% !important;
+
+    /*TESTEANDP ADAPTACION PANTALLAS GRANDES*/
+    max-width: 1049.985px;
+}
+
+.col-8 {
+    display: flex;
+    flex: 0 0 auto;
+    width: 66.4% !important;
+
+    /*TESTEANDP ADAPTACION PANTALLAS GRANDES*/
+    max-width: 933.32px;
+}
+
+.col-7 {
+    display: flex;
+    flex: 0 0 auto;
+    width: 58.1% !important;
+
+    /*TESTEANDP ADAPTACION PANTALLAS GRANDES*/
+    max-width: 816.655px;
+}
+
+.col-6 {
+    display: flex;
+    flex: 0 0 auto;
+    width: 49.8% !important;
+
+    /*TESTEANDP ADAPTACION PANTALLAS GRANDES*/
+    max-width: 699.99px;
+}
+
+.col-5 {
+    display: flex;
+    flex: 0 0 auto;
+    width: 41.5% !important;
+
+    /*TESTEANDP ADAPTACION PANTALLAS GRANDES*/
+    max-width: 583.325px;
+}
+
+.col-4 {
+    display: flex;
+    flex: 0 0 auto;
+    width: 33.2% !important;
+
+    /*TESTEANDP ADAPTACION PANTALLAS GRANDES*/
+    max-width: 466.66px;
+}
+
+.col-3 {
+    display: flex;
+    flex: 0 0 auto;
+    width: 24.9% !important;
+
+    /*TESTEANDP ADAPTACION PANTALLAS GRANDES*/
+    max-width: 349.995px;
+}
+
+.col-2 {
+    display: flex;
+    flex: 0 0 auto;
+    width: 16.6% !important;
+
+    /*TESTEANDP ADAPTACION PANTALLAS GRANDES*/
+    max-width: 233.33px;
+}
+
+.col {
+    display: flex;
+    flex: 0 0 auto;
+    width: 8.3% !important;
+
+    /*TESTEANDP ADAPTACION PANTALLAS GRANDES*/
+    max-width: 116.665px;
+}
+
+.card {
+    width: 18rem !important;
+}
+
+.card>#card-header {
+    text-transform: uppercase;
+}
+
+.column {
+    flex-direction: column;
+}
+
+/* .vh-100 {
+    min-height: 100% !important;
+}
+
+.hw-100 {
+    min-width: 100% !important;
+} */
+
+/* smartphone */
+@media screen and (max-width: 767px) {
+
+    /* on smarptphone, the content is wrapped into cells */
+    .col-12,
+    .col-11,
+    .col-10,
+    .col-9,
+    .col-8,
+    .col-7,
+    .col-6,
+    .col-5,
+    .col-4,
+    .col-3,
+    .col-2,
+    .col {
+        flex-wrap: wrap;
+    }
+
+    /* on smartphone, the cells cover entire width */
+    .col-12,
+    .col-11,
+    .col-10,
+    .col-9,
+    .col-8,
+    .col-7,
+    .col-6,
+    .col-5,
+    .col-4,
+    .col-3,
+    .col-2,
+    .col {
+        width: 100% !important;
+        min-width: 100% !important;
+    }
+
+    /* on smartphone, the cards cover entire width of parent element */
+    .card {
+        width: 100% !important;
+    }
+}
