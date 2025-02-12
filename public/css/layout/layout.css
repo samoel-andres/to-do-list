@@ -3,13 +3,9 @@
 .container {
     display: flex;
     flex-wrap: wrap;
-
-    /*TESTEANDP ADAPTACION PANTALLAS GRANDES*/
     max-width: 1399.98px;
     margin-left: auto;
     margin-right: auto;
-
-    /* TESTEANDO CONTENIDO */
     position: relative;
 }
 
@@ -25,8 +21,6 @@
     display: flex;
     flex: 0 0 auto;
     width: 100% !important;
-
-    /*TESTEANDP ADAPTACION PANTALLAS GRANDES*/
     max-width: 1399.98px;
 }
 
@@ -34,8 +28,6 @@
     display: flex;
     flex: 0 0 auto;
     width: 91.3% !important;
-
-    /*TESTEANDP ADAPTACION PANTALLAS GRANDES*/
     max-width: 1283.315px;
 }
 
@@ -43,8 +35,6 @@
     display: flex;
     flex: 0 0 auto;
     width: 83% !important;
-
-    /*TESTEANDP ADAPTACION PANTALLAS GRANDES*/
     max-width: 1166.65px;
 }
 
@@ -52,8 +42,6 @@
     display: flex;
     flex: 0 0 auto;
     width: 74.7% !important;
-
-    /*TESTEANDP ADAPTACION PANTALLAS GRANDES*/
     max-width: 1049.985px;
 }
 
@@ -61,8 +49,6 @@
     display: flex;
     flex: 0 0 auto;
     width: 66.4% !important;
-
-    /*TESTEANDP ADAPTACION PANTALLAS GRANDES*/
     max-width: 933.32px;
 }
 
@@ -70,8 +56,6 @@
     display: flex;
     flex: 0 0 auto;
     width: 58.1% !important;
-
-    /*TESTEANDP ADAPTACION PANTALLAS GRANDES*/
     max-width: 816.655px;
 }
 
@@ -79,8 +63,6 @@
     display: flex;
     flex: 0 0 auto;
     width: 49.8% !important;
-
-    /*TESTEANDP ADAPTACION PANTALLAS GRANDES*/
     max-width: 699.99px;
 }
 
@@ -88,8 +70,6 @@
     display: flex;
     flex: 0 0 auto;
     width: 41.5% !important;
-
-    /*TESTEANDP ADAPTACION PANTALLAS GRANDES*/
     max-width: 583.325px;
 }
 
@@ -97,8 +77,6 @@
     display: flex;
     flex: 0 0 auto;
     width: 33.2% !important;
-
-    /*TESTEANDP ADAPTACION PANTALLAS GRANDES*/
     max-width: 466.66px;
 }
 
@@ -106,8 +84,6 @@
     display: flex;
     flex: 0 0 auto;
     width: 24.9% !important;
-
-    /*TESTEANDP ADAPTACION PANTALLAS GRANDES*/
     max-width: 349.995px;
 }
 
@@ -115,8 +91,6 @@
     display: flex;
     flex: 0 0 auto;
     width: 16.6% !important;
-
-    /*TESTEANDP ADAPTACION PANTALLAS GRANDES*/
     max-width: 233.33px;
 }
 
@@ -124,8 +98,6 @@
     display: flex;
     flex: 0 0 auto;
     width: 8.3% !important;
-
-    /*TESTEANDP ADAPTACION PANTALLAS GRANDES*/
     max-width: 116.665px;
 }
 
@@ -140,14 +112,6 @@
 .column {
     flex-direction: column;
 }
-
-/* .vh-100 {
-    min-height: 100% !important;
-}
-
-.hw-100 {
-    min-width: 100% !important;
-} */
 
 /* smartphone */
 @media screen and (max-width: 767px) {
